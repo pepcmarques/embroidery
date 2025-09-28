@@ -1,0 +1,83 @@
+@baseUrl = http://localhost:3001
+
+### Complete Authentication Flow Test
+
+### Step 1: Create a regular user (public endpoint)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "regular@example.com",
+  "name": "Regular User",
+  "password": "password123"
+}
+
+###
+
+### Step 2: Create another user to become admin later
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "admin@example.com", 
+  "name": "Admin User",
+  "password": "adminpass123"
+}
+
+###
+
+### Step 3: Login as regular user
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "regular@example.com",
+  "password": "password123"
+}
+
+### Step 4: Copy the access_token from login response above and paste below
+@regularToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWcycWw2emYwMDAwcXE2dnR4a2pzM3loIiwiZW1haWwiOiJyZWd1bGFyQGV4YW1wbGUuY29tIiwiaXNfYWRtaW4iOmZhbHNlLCJpYXQiOjE3NTkwMDU4NTYsImV4cCI6MTc1OTA5MjI1Nn0.28nBN0XI9FgYQWQJhVLvdwlEeUMefMwR3GqpQHeb0Vs
+
+###
+
+### Step 5: Test protected endpoints with regular user token
+
+### Get user profile (should work - logged in user)
+GET {{baseUrl}}/users/{user_id_from_step1}
+Authorization: Bearer {{regularToken}}
+
+###
+
+### Try to get all users (should fail - admin only)
+GET {{baseUrl}}/users
+Authorization: Bearer {{regularToken}}
+
+###
+
+### Update own profile (should work - logged in user)
+PATCH {{baseUrl}}/users/{user_id_from_step1}
+Authorization: Bearer {{regularToken}}
+Content-Type: application/json
+
+{
+  "name": "Regular User Updated"
+}
+
+###
+
+### Try to delete a user (should fail - admin only)
+DELETE {{baseUrl}}/users/{some_user_id}
+Authorization: Bearer {{regularToken}}
+
+###
+
+### Step 6: Test without token (should fail)
+GET {{baseUrl}}/users/{user_id}
+
+###
+
+### Note: To test admin functionality, you would need to manually 
+### set is_admin=true in the database using Prisma Studio or SQL,
+### then login as that user to get an admin token.
+
+###

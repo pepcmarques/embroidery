@@ -1,0 +1,102 @@
+@baseUrl = http://localhost:3001
+
+### Create User - POST /users
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "name": "John Doe",
+  "password": "securepassword123"
+}
+
+###
+
+### Create User without name (optional field)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "jane.doe@example.com", 
+  "password": "anotherpassword456"
+}
+
+###
+
+### Get All Users - GET /users
+GET {{baseUrl}}/users
+
+###
+
+### Get User by ID - GET /users/:id
+### Replace {user_id} with actual user ID from create response
+GET {{baseUrl}}/users/{user_id}
+
+###
+
+### Update User - PATCH /users/:id
+### Replace {user_id} with actual user ID
+PATCH {{baseUrl}}/users/{user_id}
+Content-Type: application/json
+
+{
+  "name": "John Updated",
+  "email": "john.updated@example.com"
+}
+
+###
+
+### Update User Password - PATCH /users/:id
+### Replace {user_id} with actual user ID
+PATCH {{baseUrl}}/users/{user_id}
+Content-Type: application/json
+
+{
+  "password": "newpassword789"
+}
+
+###
+
+### Delete User - DELETE /users/:id
+### Replace {user_id} with actual user ID
+DELETE {{baseUrl}}/users/{user_id}
+
+###
+
+### Test Validation Errors
+
+### Create User with invalid email
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "invalid-email",
+  "name": "Test User",
+  "password": "pass"
+}
+
+###
+
+### Create User with short password
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "name": "Test User", 
+  "password": "123"
+}
+
+###
+
+### Create User with duplicate email (run after creating first user)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "name": "Duplicate User",
+  "password": "password123"
+}
+
+###
