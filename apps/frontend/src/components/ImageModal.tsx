@@ -45,7 +45,7 @@ export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
       <div className="absolute inset-0 bg-black opacity-75" onClick={onClose} />
 
       {/* Modal content */}
-      <div className="relative max-w-2xl max-h-[70vh] w-full z-10">
+      <div className="relative max-w-2xl  w-full z-10">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -75,7 +75,7 @@ export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
         />
 
         {/* Image caption */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+        <div className="absolute bottom-0 left-0 right-0 p-6">
           <h3 className="text-white text-xl font-semibold mb-1">
             {product.name}
           </h3>
