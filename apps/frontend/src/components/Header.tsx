@@ -1,30 +1,6 @@
-'use client';
-
-import { useState } from 'react';
-import { Button, ThemeToggle } from '@repo/ui';
-import { useAuth } from '../contexts/AuthContext';
-import { useCart } from '../contexts/CartContext';
-import { AuthModal } from './auth/AuthModal';
-import { UserDropdown } from './auth/UserDropdown';
-import { CartDrawer } from './CartDrawer';
+import { ThemeSwitcher } from '@repo/ui';
 
 export const Header = () => {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const { user } = useAuth();
-  const { itemCount } = useCart();
-
-  const openLoginModal = () => {
-    setAuthMode('login');
-    setIsAuthModalOpen(true);
-  };
-
-  const openRegisterModal = () => {
-    setAuthMode('register');
-    setIsAuthModalOpen(true);
-  };
-
   return (
     <>
       <header className="bg-embroidery-surface border-b border-embroidery-border sticky top-0 z-40">
@@ -49,60 +25,17 @@ export const Header = () => {
                 Products
               </a>
               <a
-                href="/categories"
+                href="/about"
                 className="text-embroidery-secondary hover:text-embroidery-primary px-3 py-2 text-sm font-medium transition-colors"
               >
-                Categories
+                About
               </a>
             </nav>
 
             {/* Right side */}
             <div className="flex items-center space-x-4">
               {/* Theme Toggle */}
-              <ThemeToggle />
-
-              {/* Cart */}
-              <button
-                className="relative p-2 text-embroidery-secondary hover:text-embroidery-primary transition-colors"
-                onClick={() => setIsCartOpen(true)}
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.1 5H17M9 19.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM20.5 19.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
-                  />
-                </svg>
-                {itemCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-embroidery-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {itemCount}
-                  </span>
-                )}
-              </button>
-
-              {/* Auth */}
-              {user ? (
-                <UserDropdown />
-              ) : (
-                <div className="flex items-center space-x-2">
-                  <Button variant="ghost" size="md" onClick={openLoginModal}>
-                    Sign In
-                  </Button>
-                  <Button
-                    variant="primary"
-                    size="md"
-                    onClick={openRegisterModal}
-                  >
-                    Sign Up
-                  </Button>
-                </div>
-              )}
+              <ThemeSwitcher />
 
               {/* Mobile menu button */}
               <button className="md:hidden p-2 text-embroidery-secondary hover:text-embroidery-primary">
@@ -133,25 +66,15 @@ export const Header = () => {
                 Products
               </a>
               <a
-                href="/categories"
+                href="/about"
                 className="block text-embroidery-secondary hover:text-embroidery-primary px-3 py-2 text-base font-medium"
               >
-                Categories
+                About
               </a>
             </div>
           </div>
         </div>
       </header>
-
-      {/* Auth Modal */}
-      <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={() => setIsAuthModalOpen(false)}
-        initialMode={authMode}
-      />
-
-      {/* Cart Drawer */}
-      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>
   );
 };

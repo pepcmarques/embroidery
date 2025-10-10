@@ -1,5 +1,6 @@
 export { Button } from './Button';
-export { Input } from './Input';
 export { Card, CardHeader, CardContent, CardFooter } from './Card';
-export { Modal } from './Modal';
+export { ThemeSwitcher } from './ThemeToggle';
 export * from './types';
+
+export type { Product } from './product.types';

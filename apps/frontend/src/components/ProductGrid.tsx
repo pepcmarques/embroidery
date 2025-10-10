@@ -1,43 +1,35 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Product, PaginatedProducts } from '@repo/types';
 import { ProductCard } from './ProductCard';
-import { Button, Input } from '@repo/ui';
+import { Product } from '@repo/ui';
+import { Button } from '@repo/ui';
+import productsData from '../data/products.json';
 
 interface ProductGridProps {
-  initialProducts?: PaginatedProducts;
+  initialProducts?: Product[];
 }
 
 export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
-  const [products, setProducts] = useState<PaginatedProducts | null>(
+  const [products, setProducts] = useState<Product[] | null>(
     initialProducts || null
   );
   const [isLoading, setIsLoading] = useState(!initialProducts);
-  const [searchTerm, setSearchTerm] = useState<string>('');
   const [currentPage, setCurrentPage] = useState(1);
 
-  const fetchProducts = async (page = 1, search = '') => {
+  const fetchProducts = async () => {
     setIsLoading(true);
-    try {
-      const params = new URLSearchParams({
-        page: page.toString(),
-        limit: '12',
-        ...(search && { search }),
-      });
 
-      const response = await fetch(
-        `http://localhost:3001/api/v1/products?${params}`
-      );
-      if (response.ok) {
-        const data = await response.json();
-        setProducts(data);
-      }
-    } catch (error) {
-      console.error('Failed to fetch products:', error);
-    } finally {
-      setIsLoading(false);
-    }
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 300));
+
+    let filteredProducts = productsData as Product[];
+
+    // Only show active products
+    filteredProducts = filteredProducts.filter((product) => product.isActive);
+
+    setProducts(filteredProducts);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -46,24 +38,17 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     }
   }, []);
 
-  useEffect(() => {
-    const delayedSearch = setTimeout(() => {
-      fetchProducts(1, searchTerm);
-      setCurrentPage(1);
-    }, 300);
-
-    return () => clearTimeout(delayedSearch);
-  }, [searchTerm]);
-
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
-    fetchProducts(page, searchTerm);
+    // No need to fetch products again for client-side pagination
   };
 
   const renderPagination = () => {
-    if (!products || products.totalPages <= 1) return null;
+    if (!products) return null;
 
-    const pages = Array.from({ length: products.totalPages }, (_, i) => i + 1);
+    const productsPerPage = 4;
+    const totalPages = Math.ceil(products.length / productsPerPage);
+    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
     return (
       <div className="flex items-center justify-center space-x-2 mt-8">
@@ -89,7 +74,7 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
 
         <Button
           onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === products.totalPages}
+          disabled={currentPage === totalPages}
           variant="outline"
           size="sm"
         >
@@ -99,34 +84,19 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     );
   };
 
+  // Get the current page's products
+  const getCurrentPageProducts = () => {
+    if (!products) return [];
+
+    const productsPerPage = 4;
+    const startIndex = (currentPage - 1) * productsPerPage;
+    const endIndex = startIndex + productsPerPage;
+
+    return products.slice(startIndex, endIndex);
+  };
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      {/* Filters */}
-      <div className="mb-8">
-        <div className="flex flex-col md:flex-row gap-4">
-          <div className="flex-1">
-            <Input
-              type="text"
-              placeholder="Search products..."
-              value={searchTerm}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                setSearchTerm(e.target.value)
-              }
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Results summary */}
-      {products && (
-        <div className="mb-6">
-          <p className="text-embroidery-secondary">
-            Showing {products.products.length} of {products.total} products
-            {searchTerm && <span> for "{searchTerm}"</span>}
-          </p>
-        </div>
-      )}
-
       {/* Loading state */}
       {isLoading && (
         <div className="flex items-center justify-center py-12">
@@ -137,9 +107,9 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
       {/* Products grid */}
       {products && !isLoading && (
         <>
-          {products.products.length > 0 ? (
+          {products.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {products.products.map((product) => (
+              {getCurrentPageProducts().map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
@@ -164,9 +134,7 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
                 No products found
               </h3>
               <p className="text-embroidery-secondary">
-                {searchTerm
-                  ? 'Try adjusting your search criteria.'
-                  : 'No products available at the moment.'}
+                No products available at the moment.
               </p>
             </div>
           )}
