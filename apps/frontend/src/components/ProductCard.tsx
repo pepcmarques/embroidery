@@ -13,12 +13,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const { addToCart } = useCart();
 
-  const handleAddToCart = async () => {
+  const handleAddToCart = () => {
     if (product.stock <= 0) return;
 
     setIsAddingToCart(true);
     try {
-      await addToCart(product.id, 1);
+      addToCart(product, 1);
     } catch (error) {
       console.error('Failed to add to cart:', error);
       // TODO: Show toast notification
@@ -27,11 +27,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
     }
   };
 
-  const formatPrice = (price: number) => {
+  const formatPrice = (price: number | string) => {
+    const numericPrice = typeof price === 'string' ? parseFloat(price) : price;
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
-    }).format(price);
+    }).format(numericPrice);
   };
 
   return (

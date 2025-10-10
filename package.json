@@ -1,0 +1,28 @@
+{
+  "name": "embroidery-monorepo",
+  "version": "1.0.0",
+  "description": "A monorepo with NextJS frontend and NestJS backend",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "turbo clean && rm -rf node_modules",
+    "test": "turbo test"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^2.5.8",
+    "turbo": "^2.5.8",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "npm@11.6.1",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

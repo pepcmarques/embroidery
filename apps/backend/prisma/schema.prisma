@@ -18,7 +18,6 @@ model User {
   updatedAt DateTime @updatedAt
 
   // Relations
-  carts  Cart[]
   orders Order[]
 
   @@map("users")
@@ -53,46 +52,9 @@ model Product {
   category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
 
   // Relations
-  cartItems  CartItem[]
   orderItems OrderItem[]
 
   @@map("products")
-}
-
-model Cart {
-  id        String   @id @default(cuid())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  // Foreign Keys (optional for guest carts)
-  userId String?
-  user   User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  // Guest cart identifier (for non-authenticated users)
-  sessionId String?
-
-  // Relations
-  items CartItem[]
-
-  @@unique([userId])
-  @@unique([sessionId])
-  @@map("carts")
-}
-
-model CartItem {
-  id        String   @id @default(cuid())
-  quantity  Int      @default(1)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  // Foreign Keys
-  cartId    String
-  cart      Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
-  productId String
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
-
-  @@unique([cartId, productId])
-  @@map("cart_items")
 }
 
 model Order {

@@ -18,7 +18,7 @@ async function bootstrap() {
   app.enableCors({
     origin: ['http://localhost:3000', 'http://localhost:3002'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Session-Id'],
   });
 
   app.setGlobalPrefix('api/v1');

@@ -7,16 +7,24 @@ import {
   useState,
   ReactNode,
 } from 'react';
-import { Cart, CartItem } from '@repo/types';
-import { useAuth } from './AuthContext';
+import { Product } from '@repo/types';
+
+// Simplified Cart types for frontend-only storage
+interface CartItem {
+  id: string; // productId
+  product: Product;
+  quantity: number;
+  addedAt: Date;
+}
 
 interface CartContextType {
-  cart: Cart | null;
+  items: CartItem[];
   itemCount: number;
-  addToCart: (productId: string, quantity: number) => Promise<void>;
-  updateCartItem: (itemId: string, quantity: number) => Promise<void>;
-  removeFromCart: (itemId: string) => Promise<void>;
-  clearCart: () => Promise<void>;
+  addToCart: (product: Product, quantity?: number) => void;
+  updateQuantity: (productId: string, quantity: number) => void;
+  removeFromCart: (productId: string) => void;
+  clearCart: () => void;
+  getTotalPrice: () => number;
   isLoading: boolean;
 }
 
@@ -34,170 +42,132 @@ interface CartProviderProps {
   children: ReactNode;
 }
 
+const CART_STORAGE_KEY = 'embroidery_cart';
+
 export const CartProvider = ({ children }: CartProviderProps) => {
-  const [cart, setCart] = useState<Cart | null>(null);
+  const [items, setItems] = useState<CartItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const { user, token } = useAuth();
 
-  const getSessionId = () => {
-    let sessionId = localStorage.getItem('session_id');
-    if (!sessionId) {
-      sessionId =
-        Math.random().toString(36).substring(2, 15) +
-        Math.random().toString(36).substring(2, 15);
-      localStorage.setItem('session_id', sessionId);
-    }
-    return sessionId;
-  };
-
-  const getHeaders = () => {
-    const headers: Record<string, string> = {
-      'Content-Type': 'application/json',
-    };
-
-    if (token) {
-      headers['Authorization'] = `Bearer ${token}`;
-    } else {
-      headers['X-Session-Id'] = getSessionId();
-    }
-
-    return headers;
-  };
-
-  const fetchCart = async () => {
-    try {
-      const response = await fetch('http://localhost:3001/api/v1/cart', {
-        headers: getHeaders(),
-      });
-
-      if (response.ok) {
-        const cartData = await response.json();
-        setCart(cartData);
-      }
-    } catch (error) {
-      console.error('Failed to fetch cart:', error);
-    }
-  };
-
+  // Load cart from localStorage on mount
   useEffect(() => {
-    fetchCart();
-  }, [user, token]);
-
-  const addToCart = async (productId: string, quantity: number) => {
-    setIsLoading(true);
     try {
-      const response = await fetch('http://localhost:3001/api/v1/cart/add', {
-        method: 'POST',
-        headers: getHeaders(),
-        body: JSON.stringify({
-          productId,
-          quantity,
-          sessionId: !token ? getSessionId() : undefined,
-        }),
-      });
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to add to cart');
+      const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+      if (storedCart) {
+        const parsedCart = JSON.parse(storedCart);
+        // Convert addedAt back to Date objects and ensure price is a number
+        const cartWithDates = parsedCart.map((item: any) => ({
+          ...item,
+          addedAt: new Date(item.addedAt),
+          product: {
+            ...item.product,
+            price:
+              typeof item.product.price === 'string'
+                ? parseFloat(item.product.price)
+                : item.product.price,
+          },
+        }));
+        setItems(cartWithDates);
       }
-
-      const updatedCart = await response.json();
-      setCart(updatedCart);
     } catch (error) {
-      console.error('Add to cart error:', error);
-      throw error;
-    } finally {
-      setIsLoading(false);
+      console.error('Failed to load cart from localStorage:', error);
     }
-  };
+  }, []);
 
-  const updateCartItem = async (itemId: string, quantity: number) => {
-    setIsLoading(true);
+  // Save cart to localStorage whenever items change
+  useEffect(() => {
     try {
-      const response = await fetch(
-        `http://localhost:3001/api/v1/cart/items/${itemId}`,
-        {
-          method: 'PATCH',
-          headers: getHeaders(),
-          body: JSON.stringify({ quantity }),
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+    } catch (error) {
+      console.error('Failed to save cart to localStorage:', error);
+    }
+  }, [items]);
+
+  const addToCart = (product: Product, quantity: number = 1) => {
+    setIsLoading(true);
+
+    try {
+      // Ensure price is a number (in case it comes from API as string)
+      const normalizedProduct = {
+        ...product,
+        price:
+          typeof product.price === 'string'
+            ? parseFloat(product.price)
+            : product.price,
+      };
+
+      setItems((currentItems) => {
+        const existingItem = currentItems.find(
+          (item) => item.id === product.id
+        );
+
+        if (existingItem) {
+          // Update quantity of existing item
+          return currentItems.map((item) =>
+            item.id === product.id
+              ? { ...item, quantity: item.quantity + quantity }
+              : item
+          );
+        } else {
+          // Add new item
+          const newItem: CartItem = {
+            id: normalizedProduct.id,
+            product: normalizedProduct,
+            quantity,
+            addedAt: new Date(),
+          };
+          return [...currentItems, newItem];
         }
-      );
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to update cart item');
-      }
-
-      const updatedCart = await response.json();
-      setCart(updatedCart);
-    } catch (error) {
-      console.error('Update cart item error:', error);
-      throw error;
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const removeFromCart = async (itemId: string) => {
-    setIsLoading(true);
-    try {
-      const response = await fetch(
-        `http://localhost:3001/api/v1/cart/items/${itemId}`,
-        {
-          method: 'DELETE',
-          headers: getHeaders(),
-        }
-      );
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to remove from cart');
-      }
-
-      const updatedCart = await response.json();
-      setCart(updatedCart);
-    } catch (error) {
-      console.error('Remove from cart error:', error);
-      throw error;
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const clearCart = async () => {
-    setIsLoading(true);
-    try {
-      const response = await fetch('http://localhost:3001/api/v1/cart/clear', {
-        method: 'DELETE',
-        headers: getHeaders(),
       });
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.message || 'Failed to clear cart');
-      }
-
-      setCart(null);
-    } catch (error) {
-      console.error('Clear cart error:', error);
-      throw error;
     } finally {
       setIsLoading(false);
     }
   };
 
-  const itemCount =
-    cart?.items.reduce((total, item) => total + item.quantity, 0) || 0;
+  const updateQuantity = (productId: string, quantity: number) => {
+    if (quantity <= 0) {
+      removeFromCart(productId);
+      return;
+    }
+
+    setItems((currentItems) =>
+      currentItems.map((item) =>
+        item.id === productId ? { ...item, quantity } : item
+      )
+    );
+  };
+
+  const removeFromCart = (productId: string) => {
+    setItems((currentItems) =>
+      currentItems.filter((item) => item.id !== productId)
+    );
+  };
+
+  const clearCart = () => {
+    setItems([]);
+  };
+
+  const getTotalPrice = () => {
+    return items.reduce((total, item) => {
+      const price =
+        typeof item.product.price === 'string'
+          ? parseFloat(item.product.price)
+          : item.product.price;
+      return total + price * item.quantity;
+    }, 0);
+  };
+
+  const itemCount = items.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <CartContext.Provider
       value={{
-        cart,
+        items,
         itemCount,
         addToCart,
-        updateCartItem,
+        updateQuantity,
         removeFromCart,
         clearCart,
+        getTotalPrice,
         isLoading,
       }}
     >

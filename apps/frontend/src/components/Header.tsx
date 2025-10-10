@@ -6,10 +6,12 @@ import { useAuth } from '../contexts/AuthContext';
 import { useCart } from '../contexts/CartContext';
 import { AuthModal } from './auth/AuthModal';
 import { UserDropdown } from './auth/UserDropdown';
+import { CartDrawer } from './CartDrawer';
 
 export const Header = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const { user } = useAuth();
   const { itemCount } = useCart();
 
@@ -62,9 +64,7 @@ export const Header = () => {
               {/* Cart */}
               <button
                 className="relative p-2 text-embroidery-secondary hover:text-embroidery-primary transition-colors"
-                onClick={() => {
-                  /* TODO: Open cart drawer */
-                }}
+                onClick={() => setIsCartOpen(true)}
               >
                 <svg
                   className="w-6 h-6"
@@ -149,6 +149,9 @@ export const Header = () => {
         onClose={() => setIsAuthModalOpen(false)}
         initialMode={authMode}
       />
+
+      {/* Cart Drawer */}
+      <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </>
   );
 };
