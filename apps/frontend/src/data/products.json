@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Romeo and Juliet",
+    "image": "/images/products/embroidery/romeoJuliet.jpg",
+    "description": "Romeo and Juliet embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "2",
+    "name": "Macabeth",
+    "image": "/images/products/embroidery/macabeth.jpg",
+    "description": "Macabeth embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "3",
+    "name": "Romeo and Juliet",
+    "image": "/images/products/embroidery/romeoJulietDance.jpg",
+    "description": "Romeo and Juliet embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "4",
+    "name": "King Lear",
+    "image": "/images/products/embroidery/kingLear.jpg",
+    "description": "King Lear embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "4",
+    "name": "Marpole VPL Mural",
+    "image": "/images/products/embroidery/marpoleVpl.jpg",
+    "description": "Marpole VPL Mural embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  }
+]

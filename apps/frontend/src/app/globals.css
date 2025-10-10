@@ -1,10 +1,9 @@
 @import 'tailwindcss';
 
 @theme {
+  /* Default (light) theme */
   --color-background: #ffffff;
   --color-foreground: #0f172a;
-
-  /* embroidery Brand Colors */
   --color-embroidery-primary: #ca8a04;
   --color-embroidery-primary-hover: #a16207;
   --color-embroidery-secondary: #475569;
@@ -20,44 +19,23 @@
   --color-embroidery-danger: #dc2626;
 }
 
-/* Dark mode theme */
-@theme dark {
-  --color-background: #0f172a;
-  --color-foreground: #f1f5f9;
-
-  /* embroidery Brand Colors - Dark Mode */
-  --color-embroidery-primary: #fbbf24;
-  --color-embroidery-primary-hover: #fde047;
-  --color-embroidery-secondary: #cbd5e1;
-  --color-embroidery-secondary-hover: #f1f5f9;
-  --color-embroidery-accent: #1e293b;
-  --color-embroidery-accent-hover: #334155;
-  --color-embroidery-neutral: #f1f5f9;
-  --color-embroidery-background: #0f172a;
-  --color-embroidery-surface: #1e293b;
-  --color-embroidery-surface-hover: #334155;
-  --color-embroidery-muted: #94a3b8;
-  --color-embroidery-border: #334155;
-  --color-embroidery-danger: #ef4444;
-}
-
-/* Override theme variables when dark class is applied */
+/* Dark mode overrides */
 .dark {
-  --color-background: #0f172a;
-  --color-foreground: #f1f5f9;
-  --color-embroidery-primary: #fbbf24;
-  --color-embroidery-primary-hover: #fde047;
-  --color-embroidery-secondary: #cbd5e1;
-  --color-embroidery-secondary-hover: #f1f5f9;
-  --color-embroidery-accent: #1e293b;
-  --color-embroidery-accent-hover: #334155;
-  --color-embroidery-neutral: #f1f5f9;
-  --color-embroidery-background: #0f172a;
-  --color-embroidery-surface: #1e293b;
-  --color-embroidery-surface-hover: #334155;
-  --color-embroidery-muted: #94a3b8;
-  --color-embroidery-border: #334155;
-  --color-embroidery-danger: #ef4444;
+  --color-background: #0f172a !important;
+  --color-foreground: #f1f5f9 !important;
+  --color-embroidery-primary: #fbbf24 !important;
+  --color-embroidery-primary-hover: #fde047 !important;
+  --color-embroidery-secondary: #cbd5e1 !important;
+  --color-embroidery-secondary-hover: #f1f5f9 !important;
+  --color-embroidery-accent: #1e293b !important;
+  --color-embroidery-accent-hover: #334155 !important;
+  --color-embroidery-neutral: #f1f5f9 !important;
+  --color-embroidery-background: #0f172a !important;
+  --color-embroidery-surface: #1e293b !important;
+  --color-embroidery-surface-hover: #334155 !important;
+  --color-embroidery-muted: #94a3b8 !important;
+  --color-embroidery-border: #334155 !important;
+  --color-embroidery-danger: #ef4444 !important;
 }
 
 body {
