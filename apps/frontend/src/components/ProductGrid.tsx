@@ -10,6 +10,8 @@ interface ProductGridProps {
   initialProducts?: Product[];
 }
 
+const productsPerPage = 6;
+
 export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
   const [products, setProducts] = useState<Product[] | null>(
     initialProducts || null
@@ -46,7 +48,6 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
   const renderPagination = () => {
     if (!products) return null;
 
-    const productsPerPage = 4;
     const totalPages = Math.ceil(products.length / productsPerPage);
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -88,7 +89,6 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
   const getCurrentPageProducts = () => {
     if (!products) return [];
 
-    const productsPerPage = 4;
     const startIndex = (currentPage - 1) * productsPerPage;
     const endIndex = startIndex + productsPerPage;
 
@@ -108,7 +108,7 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
       {products && !isLoading && (
         <>
           {products.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {getCurrentPageProducts().map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

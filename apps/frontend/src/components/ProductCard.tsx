@@ -15,9 +15,9 @@ export const ProductCard = ({ product }: ProductCardProps) => {
 
   const formatPrice = (price: number | string) => {
     const numericPrice = typeof price === 'string' ? parseFloat(price) : price;
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-CA', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'CAD',
     }).format(numericPrice);
   };
 
@@ -53,6 +53,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </div>
 
+        {/* 
         <CardContent className="p-4">
           <div className="mb-2">
             <h3 className="text-lg font-semibold text-embroidery-neutral line-clamp-2">
@@ -64,6 +65,7 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             {product.description}
           </p>
         </CardContent>
+       */}
       </Card>
 
       <ImageModal

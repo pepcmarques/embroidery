@@ -40,12 +40,112 @@
     "isActive": true
   },
   {
-    "id": "4",
+    "id": "5",
     "name": "Marpole VPL Mural",
     "image": "/images/products/embroidery/marpoleVpl.jpg",
     "description": "Marpole VPL Mural embroidery art.",
     "price": 99.99,
     "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "6",
+    "name": "Carnegie VPL",
+    "image": "/images/products/embroidery/carnegieVpl.jpg",
+    "description": "Carnegie VPL embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "7",
+    "name": "Terry Salman VPL",
+    "image": "/images/products/embroidery/tsnVpl.jpg",
+    "description": "Terry Salman VPL embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "8",
+    "name": "Trust the process",
+    "image": "/images/products/xstich/IMG_0812.jpg",
+    "description": "Trust the process x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "9",
+    "name": "Stay close...",
+    "image": "/images/products/xstich/IMG_0813.jpg",
+    "description": "Stay close to people who feel like sunshine x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "10",
+    "name": "Stop overthinking",
+    "image": "/images/products/xstich/IMG_0816.jpg",
+    "description": "Stop overthinking x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "11",
+    "name": "Self care isn't selfish",
+    "image": "/images/products/xstich/IMG_0817.jpg",
+    "description": "Self care isn't selfish x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "12",
+    "name": "It's OK to have a bad day",
+    "image": "/images/products/xstich/IMG_0818.jpg",
+    "description": "It's OK to have a bad day x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "13",
+    "name": "Do less with more focus",
+    "image": "/images/products/xstich/IMG_0819.jpg",
+    "description": "Do less with more focus x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "14",
+    "name": "Today is a new day",
+    "image": "/images/products/xstich/IMG_0820.jpg",
+    "description": "Today is a new day x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "15",
+    "name": "Time for positivi-tea",
+    "image": "/images/products/xstich/IMG_0821.jpg",
+    "description": "Time for positivi-tea x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
     "stock": 1,
     "isActive": true
   }
