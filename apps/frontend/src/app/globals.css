@@ -12,7 +12,7 @@
   --color-embroidery-accent-hover: #e2e8f0;
   --color-embroidery-neutral: #1e293b;
   --color-embroidery-background: #f8fafc;
-  --color-embroidery-surface: #ffffff;
+  --color-embroidery-surface: #ffffd0;
   --color-embroidery-surface-hover: #f8fafc;
   --color-embroidery-muted: #64748b;
   --color-embroidery-border: #e2e8f0;
@@ -31,7 +31,7 @@
   --color-embroidery-accent-hover: #334155 !important;
   --color-embroidery-neutral: #f1f5f9 !important;
   --color-embroidery-background: #0f172a !important;
-  --color-embroidery-surface: #1e293b !important;
+  --color-embroidery-surface: #334155 !important;
   --color-embroidery-surface-hover: #334155 !important;
   --color-embroidery-muted: #94a3b8 !important;
   --color-embroidery-border: #334155 !important;
