@@ -4,7 +4,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <div className="text-center">
           <p className="text-embroidery-secondary mb-2">
-            Made by hand with love. ❤️
+            Hand made with love. ❤️
           </p>
           <p className="text-sm">
             Contact:{' '}
