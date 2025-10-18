@@ -148,5 +148,15 @@
     "category": "x-stich",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "16",
+    "name": "I am free to be me",
+    "image": "/images/products/xstich/IMG_0822.jpg",
+    "description": "I am free to be me x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
   }
 ]

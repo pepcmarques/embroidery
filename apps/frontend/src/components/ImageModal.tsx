@@ -79,7 +79,9 @@ export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
           <h3 className="text-white text-xl font-semibold mb-1">
             {product.name}
           </h3>
+          {/*
           <p className="text-gray-200 text-sm">{product.description}</p>
+          */}
         </div>
       </div>
     </div>
