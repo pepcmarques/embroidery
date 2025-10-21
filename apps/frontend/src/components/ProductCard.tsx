@@ -53,7 +53,6 @@ export const ProductCard = ({ product }: ProductCardProps) => {
           )}
         </div>
 
-        {/* 
         <CardContent className="p-4">
           <div className="mb-2">
             <h3 className="text-lg font-semibold text-embroidery-neutral line-clamp-2">
@@ -61,11 +60,12 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             </h3>
           </div>
 
+          {/* 
           <p className="text-sm text-embroidery-muted mb-3 line-clamp-2">
             {product.description}
           </p>
+          */}
         </CardContent>
-       */}
       </Card>
 
       <ImageModal
