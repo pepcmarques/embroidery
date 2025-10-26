@@ -58,6 +58,9 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
           disabled={currentPage === 1}
           variant="outline"
           size="sm"
+          className={`disabled:text-embroidery-muted disabled:border-embroidery-muted disabled:bg-transparent disabled:cursor-not-allowed ${
+            currentPage > 1 ? 'cursor-pointer' : ''
+          }`}
         >
           Previous
         </Button>
@@ -68,6 +71,9 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
             onClick={() => handlePageChange(page)}
             variant={page === currentPage ? 'primary' : 'outline'}
             size="sm"
+            className={
+              page === currentPage ? 'cursor-default' : 'cursor-pointer'
+            }
           >
             {page}
           </Button>
@@ -78,6 +84,9 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
           disabled={currentPage === totalPages}
           variant="outline"
           size="sm"
+          className={`disabled:text-embroidery-muted disabled:border-embroidery-muted disabled:bg-transparent disabled:cursor-not-allowed ${
+            currentPage < totalPages ? 'cursor-pointer' : ''
+          }`}
         >
           Next
         </Button>
