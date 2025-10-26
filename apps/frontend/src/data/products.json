@@ -158,5 +158,25 @@
     "category": "x-stich",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "17",
+    "name": "Slow down",
+    "image": "/images/products/xstich/IMG_0842.jpg",
+    "description": "Slow down x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "18",
+    "name": "Marpole Neighborhood House",
+    "image": "/images/products/embroidery/mnh.jpg",
+    "description": "Marpole Neighborhood House embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]
