@@ -30,6 +30,9 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     // Only show active products
     filteredProducts = filteredProducts.filter((product) => product.isActive);
 
+    // Sort products by category
+    filteredProducts = filteredProducts.sort((a, b) => a.category.localeCompare(b.category));
+
     setProducts(filteredProducts);
     setIsLoading(false);
   };
