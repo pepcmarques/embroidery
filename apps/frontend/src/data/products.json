@@ -178,5 +178,25 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "19",
+    "name": "Macabeth",
+    "image": "/images/products/embroidery/macabeth2.jpg",
+    "description": "Macabeth embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },  
+  {
+    "id": "20",
+    "name": "Macabeth",
+    "image": "/images/products/embroidery/macabeth3.jpg",
+    "description": "Macabeth embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]
