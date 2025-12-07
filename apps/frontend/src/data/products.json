@@ -218,5 +218,25 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "23",
+    "name": "Rainbow Earrings",
+    "image": "/images/products/embroidery/earrings_2.png",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "24",
+    "name": "Mapple Earrings",
+    "image": "/images/products/embroidery/earrings_3.png",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]
