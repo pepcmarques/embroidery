@@ -198,5 +198,25 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "21",
+    "name": "Marry Wives of Windsor",
+    "image": "/images/products/embroidery/Windsor.png",
+    "description": "Windsor embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "22",
+    "name": "Happy Birthday Earrings",
+    "image": "/images/products/embroidery/earrings_1.png",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]
