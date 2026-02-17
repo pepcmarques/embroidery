@@ -188,7 +188,7 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
-  },  
+  },
   {
     "id": "20",
     "name": "Macabeth",
@@ -234,6 +234,36 @@
     "name": "Mapple Earrings",
     "image": "/images/products/embroidery/earrings_3.png",
     "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "25",
+    "name": "Quote - Shakespeare",
+    "image": "/images/products/embroidery/quote01.png",
+    "description": "Quote embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "26",
+    "name": "Quote - Shakespeare",
+    "image": "/images/products/embroidery/quote02.png",
+    "description": "Quote embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "27",
+    "name": "Quote - Shakespeare",
+    "image": "/images/products/embroidery/quote03.png",
+    "description": "Quote embroidery art.",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,
