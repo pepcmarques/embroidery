@@ -242,7 +242,7 @@
   {
     "id": "25",
     "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote01.png",
+    "image": "/images/products/embroidery/quote01.jpg",
     "description": "Quote embroidery art.",
     "price": 99.99,
     "category": "embroidery",
@@ -252,7 +252,7 @@
   {
     "id": "26",
     "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote02.png",
+    "image": "/images/products/embroidery/quote02.jpg",
     "description": "Quote embroidery art.",
     "price": 99.99,
     "category": "embroidery",
@@ -262,7 +262,7 @@
   {
     "id": "27",
     "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote03.png",
+    "image": "/images/products/embroidery/quote03.jpg",
     "description": "Quote embroidery art.",
     "price": 99.99,
     "category": "embroidery",
