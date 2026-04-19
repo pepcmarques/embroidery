@@ -22,3 +22,18 @@ export interface ModalProps {
   title?: string;
   children: React.ReactNode;
 }
+
+export interface Workshop {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  time: string;
+  location: string;
+  instructor: string;
+  price: number;
+  maxParticipants: number;
+  currentParticipants: number;
+  isActive: boolean;
+}

@@ -71,7 +71,8 @@ export const ProductCard = ({ product }: ProductCardProps) => {
       <ImageModal
         isOpen={isImageModalOpen}
         onClose={() => setIsImageModalOpen(false)}
-        product={product}
+        imageSrc={product.image}
+        altText={product.name}
       />
     </>
   );

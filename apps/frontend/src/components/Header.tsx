@@ -30,22 +30,12 @@ export const Header = () => {
                 href="/"
                 className="text-2xl font-bold text-embroidery-primary"
               >
-                Embroidery
+                Rachel
               </a>
             </div>
 
             {/* Navigation - Desktop */}
             <nav className="hidden md:flex space-x-8">
-              <Link
-                href="/"
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  pathname === '/'
-                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                Products
-              </Link>
               <Link
                 href="/about"
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
@@ -55,6 +45,26 @@ export const Header = () => {
                 }`}
               >
                 About
+              </Link>
+              <Link
+                href="/"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  pathname === '/'
+                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
+                    : 'text-embroidery-secondary hover:text-embroidery-primary'
+                }`}
+              >
+                Embroidery works
+              </Link>
+              <Link
+                href="/workshops"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  pathname === '/workshops'
+                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
+                    : 'text-embroidery-secondary hover:text-embroidery-primary'
+                }`}
+              >
+                Workshops
               </Link>
             </nav>
 
@@ -93,16 +103,6 @@ export const Header = () => {
           <div className="md:hidden border-t border-embroidery-border py-4">
             <div className="space-y-2">
               <Link
-                href="/"
-                className={`block px-3 py-2 text-base font-medium ${
-                  pathname === '/'
-                    ? 'text-embroidery-primary bg-embroidery-primary/10 rounded-md'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                Products
-              </Link>
-              <Link
                 href="/about"
                 className={`block px-3 py-2 text-base font-medium ${
                   pathname === '/about'
@@ -111,6 +111,16 @@ export const Header = () => {
                 }`}
               >
                 About
+              </Link>
+              <Link
+                href="/"
+                className={`block px-3 py-2 text-base font-medium ${
+                  pathname === '/'
+                    ? 'text-embroidery-primary bg-embroidery-primary/10 rounded-md'
+                    : 'text-embroidery-secondary hover:text-embroidery-primary'
+                }`}
+              >
+                Embroidery works
               </Link>
 
               {/* Contact Email - Mobile */}

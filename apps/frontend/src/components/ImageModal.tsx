@@ -2,24 +2,19 @@
 
 import { useEffect } from 'react';
 
-interface Product {
-  id: string;
-  name: string;
-  image: string;
-  description: string;
-  price: number;
-  category: string;
-  stock: number;
-  isActive: boolean;
-}
-
 interface ImageModalProps {
   isOpen: boolean;
   onClose: () => void;
-  product: Product;
+  imageSrc: string;
+  altText: string;
 }
 
-export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
+export const ImageModal = ({
+  isOpen,
+  onClose,
+  imageSrc,
+  altText,
+}: ImageModalProps) => {
   // Handle ESC key press
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -37,7 +32,7 @@ export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
     };
   }, [isOpen, onClose]);
 
-  if (!isOpen || !product.image) return null;
+  if (!isOpen || !imageSrc) return null;
 
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
@@ -45,7 +40,7 @@ export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
       <div className="absolute inset-0 bg-black opacity-75" onClick={onClose} />
 
       {/* Modal content */}
-      <div className="relative max-w-2xl  w-full z-10">
+      <div className="relative max-w-2xl w-full z-10">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -69,19 +64,14 @@ export const ImageModal = ({ isOpen, onClose, product }: ImageModalProps) => {
 
         {/* Image */}
         <img
-          src={product.image}
-          alt={product.name}
+          src={imageSrc}
+          alt={altText}
           className="w-full h-full object-contain rounded-lg"
         />
 
         {/* Image caption */}
         <div className="absolute bottom-0 left-0 right-0 p-6">
-          <h3 className="text-white text-xl font-semibold mb-1">
-            {product.name}
-          </h3>
-          {/*
-          <p className="text-gray-200 text-sm">{product.description}</p>
-          */}
+          <h3 className="text-white text-xl font-semibold mb-1">{altText}</h3>
         </div>
       </div>
     </div>
