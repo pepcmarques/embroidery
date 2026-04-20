@@ -30,7 +30,7 @@ export const Header = () => {
                 href="/"
                 className="text-2xl font-bold text-embroidery-primary"
               >
-                Rachel
+                Rachel Torres
               </a>
             </div>
 
@@ -54,7 +54,7 @@ export const Header = () => {
                     : 'text-embroidery-secondary hover:text-embroidery-primary'
                 }`}
               >
-                Embroidery works
+                Pieces
               </Link>
               <Link
                 href="/workshops"
@@ -120,7 +120,7 @@ export const Header = () => {
                     : 'text-embroidery-secondary hover:text-embroidery-primary'
                 }`}
               >
-                Embroidery works
+                Pieces
               </Link>
 
               {/* Contact Email - Mobile */}
