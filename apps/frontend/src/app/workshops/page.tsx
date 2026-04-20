@@ -2,7 +2,7 @@ import { WorkshopGrid } from '../../components/WorkshopGrid';
 
 export default function WorkshopsPage() {
   return (
-    <div className="min-h-screen bg-embroidery-background">
+    <div className="min-h-screen bg-embroidery-surface">
       {/* Header Section */}
       <div className="bg-gradient-to-r from-embroidery-primary to-embroidery-secondary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
