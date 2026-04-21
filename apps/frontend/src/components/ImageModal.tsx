@@ -40,7 +40,7 @@ export const ImageModal = ({
       <div className="absolute inset-0 bg-black opacity-75" onClick={onClose} />
 
       {/* Modal content */}
-      <div className="relative max-w-2xl w-full z-10">
+      <div className="relative max-w-4xl max-h-[90vh] z-10">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -66,7 +66,7 @@ export const ImageModal = ({
         <img
           src={imageSrc}
           alt={altText}
-          className="w-full h-full object-contain rounded-lg"
+          className="max-w-full max-h-full object-contain rounded-lg"
         />
 
         {/* Image caption */}
