@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { WorkshopCard } from './WorkshopCard';
 import { Workshop } from '@repo/ui';
-import workshopsData from '../data/workshops.json';
+import workshopsData from '../data/mnh/mhn.json';
 
 interface WorkshopGridProps {
   initialWorkshops?: Workshop[];

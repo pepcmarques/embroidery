@@ -1,66 +1,19 @@
-[
-  {
-    "id": "1",
-    "image": "/images/workshops/mnh/IMG_5001.png"
-  },
-  {
-    "id": "2",
-    "image": "/images/workshops/mnh/IMG_5036.jpg"
-  },
-  {
-    "id": "3",
-    "image": "/images/workshops/mnh/IMG_5056.jpg"
-  },
-  {
-    "id": "4",
-    "image": "/images/workshops/mnh/IMG_5058.jpg"
-  },
-  {
-    "id": "5",
-    "image": "/images/workshops/mnh/IMG_5148.jpg"
-  },
-  {
-    "id": "6",
-    "image": "/images/workshops/mnh/IMG_5149.jpg"
-  },
-  {
-    "id": "7",
-    "image": "/images/workshops/mnh/IMG_5151.jpg"
-  },
-  {
-    "id": "8",
-    "image": "/images/workshops/mnh/IMG_5152.jpg"
-  },
-  {
-    "id": "9",
-    "image": "/images/workshops/mnh/IMG_5154.jpeg"
-  },
-  {
-    "id": "10",
-    "image": "/images/workshops/mnh/IMG_5155.jpg"
-  },
-  {
-    "id": "11",
-    "image": "/images/workshops/mnh/IMG_5156.jpg"
-  },
-  {
-    "id": "12",
-    "image": "/images/workshops/mnh/IMG_5166.jpg"
-  },
-  {
-    "id": "13",
-    "image": "/images/workshops/mnh/IMG_5169.jpg"
-  },
-  {
-    "id": "14",
-    "image": "/images/workshops/mnh/IMG_5171.jpg"
-  },
-  {
-    "id": "15",
-    "image": "/images/workshops/mnh/IMG_5170.jpeg"
-  },
-  {
-    "id": "16",
-    "image": "/images/workshops/mnh/IMG_5163.jpg"
-  }
-]
+{
+  "workshops": [
+    {
+      "type": "registration",
+      "name": "Workshop Registration",
+      "image": "/images/workshop.jpeg",
+      "message": "Next workshop registration is open! Click on Register.",
+      "url": "https://forms.gle/4Nc4nywtkcSHdVTDA"
+    },
+    {
+      "id": 1,
+      "type": "workshop",
+      "name": "Marpole Neighborhood House",
+      "image": "/images/workshops/mnh/IMG_5001.png",
+      "message": "Explore our Marpole Neighbourhood House embroidery workshop.",
+      "data": "mnh/mhn.json"
+    }
+  ]
+}
