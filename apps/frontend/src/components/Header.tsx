@@ -66,6 +66,16 @@ export const Header = () => {
               >
                 Workshops
               </Link>
+              <Link
+                href="/resources"
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  pathname === '/resources'
+                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
+                    : 'text-embroidery-secondary hover:text-embroidery-primary'
+                }`}
+              >
+                Resources
+              </Link>
             </nav>
 
             {/* Right side */}
