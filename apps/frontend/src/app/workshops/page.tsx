@@ -23,30 +23,54 @@ export default function WorkshopsPage() {
           {workshopsData.workshops.map((workshop, index) => (
             <div
               key={workshop.id || index}
-              className="bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+              className={`bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
+                workshop.image ? 'h-auto' : 'min-h-64 relative'
+              }`}
             >
-              <div className="mb-4">
-                <Image
-                  src={workshop.image}
-                  alt={workshop.name}
-                  width={400}
-                  height={300}
-                  className="w-full h-48 object-cover rounded-md"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-embroidery-neutral mb-4">
+              {workshop.image && (
+                <div className="mb-4">
+                  <Image
+                    src={workshop.image}
+                    alt={workshop.name}
+                    width={400}
+                    height={300}
+                    className="w-full h-48 object-cover rounded-md"
+                  />
+                </div>
+              )}
+              <h3
+                className={`font-semibold text-embroidery-neutral mb-4 ${
+                  workshop.image ? 'text-xl' : 'text-2xl'
+                }`}
+              >
                 {workshop.name}
               </h3>
-              <p className="text-embroidery-secondary mb-6">
-                {workshop.message}
-              </p>
+              <div
+                className={`text-embroidery-secondary ${
+                  workshop.image ? 'mb-4' : 'mb-4'
+                }`}
+              >
+                {Array.isArray(workshop.message)
+                  ? workshop.message.map((line, idx) => (
+                      <div key={idx} className="mb-2">
+                        {line.includes('<') ? (
+                          <span dangerouslySetInnerHTML={{ __html: line }} />
+                        ) : (
+                          line
+                        )}
+                      </div>
+                    ))
+                  : workshop.message}
+              </div>
               <Link
                 href={
                   workshop.type === 'registration'
                     ? '/workshops/registration'
                     : '/workshops/mnh'
                 }
-                className="inline-block bg-embroidery-primary text-white px-4 py-2 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors"
+                className={`inline-block bg-embroidery-primary text-white px-3 py-1.5 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors ${
+                  workshop.image ? '' : 'absolute bottom-5 left-5'
+                }`}
               >
                 {workshop.type === 'registration'
                   ? 'Register'

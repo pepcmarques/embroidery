@@ -1,18 +1,21 @@
 {
   "workshops": [
     {
+      "id": 0,
       "type": "registration",
-      "name": "Workshop Registration",
-      "image": "/images/workshop.jpeg",
-      "message": "Next workshop registration is open! Click on Register.",
+      "name": "Next Workshop",
+      "message": [
+        "Next <b>Embroidering Words Workshop</b> will be at <b>Vancouver Public Library - Kitsilano Branch</b> on <b>May 2nd, 2026</b> from <b>9:30am</b> to <b>12:00pm</b>.",
+        "Register for our next workshop by clicking the link below."
+      ],
       "url": "https://forms.gle/4Nc4nywtkcSHdVTDA"
     },
     {
       "id": 1,
       "type": "workshop",
       "name": "Marpole Neighborhood House",
-      "image": "/images/workshops/mnh/IMG_5001.png",
-      "message": "Explore our Marpole Neighbourhood House embroidery workshop.",
+      "image": "/images/workshops/mnh/IMG_5056.jpg",
+      "message": "",
       "data": "mnh/mhn.json"
     }
   ]
