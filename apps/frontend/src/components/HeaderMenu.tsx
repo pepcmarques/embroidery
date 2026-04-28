@@ -15,7 +15,11 @@ const menuItems = [
   { href: '/resources', label: 'Resources' },
 ];
 
-export const HeaderMenu = ({ pathname, variant, onLinkClick }: HeaderMenuProps) => {
+export const HeaderMenu = ({
+  pathname,
+  variant,
+  onLinkClick,
+}: HeaderMenuProps) => {
   if (variant === 'desktop') {
     return (
       <nav className="hidden md:flex space-x-8">
