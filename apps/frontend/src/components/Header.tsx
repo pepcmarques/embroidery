@@ -5,10 +5,12 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
 import { IconCopy, IconCheck, IconMenu2 } from '@tabler/icons-react';
+import { HeaderMenu } from './HeaderMenu';
 
 export const Header = () => {
   const pathname = usePathname();
   const [copied, setCopied] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const copyEmail = async () => {
     try {
@@ -19,6 +21,15 @@ export const Header = () => {
       console.error('Failed to copy email: ', err);
     }
   };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen((open) => !open);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
       <header className="bg-embroidery-surface opacity-90 border-b border-embroidery-border sticky top-0 z-40">
@@ -35,48 +46,7 @@ export const Header = () => {
             </div>
 
             {/* Navigation - Desktop */}
-            <nav className="hidden md:flex space-x-8">
-              <Link
-                href="/about"
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  pathname === '/about'
-                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                About
-              </Link>
-              <Link
-                href="/"
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  pathname === '/'
-                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                Pieces
-              </Link>
-              <Link
-                href="/workshops"
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  pathname === '/workshops'
-                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                Workshops
-              </Link>
-              <Link
-                href="/resources"
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  pathname === '/resources'
-                    ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                Resources
-              </Link>
-            </nav>
+            <HeaderMenu pathname={pathname} variant="desktop" />
 
             {/* Right side */}
             <div className="flex items-center space-x-4">
@@ -103,37 +73,27 @@ export const Header = () => {
               {/* Theme Toggle */}
               <ThemeSwitcher />
               {/* Mobile menu button */}
-              <button className="md:hidden p-2 text-embroidery-secondary hover:text-embroidery-primary">
+              <button
+                type="button"
+                onClick={toggleMobileMenu}
+                className="md:hidden p-2 text-embroidery-secondary hover:text-embroidery-primary"
+                aria-expanded={mobileMenuOpen}
+                aria-label="Toggle mobile menu"
+              >
                 <IconMenu2 className="w-6 h-6" />
               </button>
             </div>
           </div>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden border-t border-embroidery-border py-4">
-            <div className="space-y-2">
-              <Link
-                href="/about"
-                className={`block px-3 py-2 text-base font-medium ${
-                  pathname === '/about'
-                    ? 'text-embroidery-primary bg-embroidery-primary/10 rounded-md'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                About
-              </Link>
-              <Link
-                href="/"
-                className={`block px-3 py-2 text-base font-medium ${
-                  pathname === '/'
-                    ? 'text-embroidery-primary bg-embroidery-primary/10 rounded-md'
-                    : 'text-embroidery-secondary hover:text-embroidery-primary'
-                }`}
-              >
-                Pieces
-              </Link>
+          {mobileMenuOpen && (
+            <div className="md:hidden border-t border-embroidery-border py-4">
+              <HeaderMenu
+                pathname={pathname}
+                variant="mobile"
+                onLinkClick={closeMobileMenu}
+              />
 
-              {/* Contact Email - Mobile */}
               {/* Contact Email - Mobile */}
               <div className="border-t border-embroidery-border pt-3 mt-3">
                 <button
@@ -154,7 +114,7 @@ export const Header = () => {
                 </button>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </header>
     </>
