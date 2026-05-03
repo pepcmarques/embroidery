@@ -8,8 +8,8 @@ import Image from 'next/image';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Embroidery Store',
-  description: 'Premium embroidery products and accessories',
+  title: 'Embroidering Words',
+  description: 'Embroidery community project by Rachel',
 };
 
 export default function RootLayout({

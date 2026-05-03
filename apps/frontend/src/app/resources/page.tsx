@@ -34,6 +34,16 @@ export default function Resources() {
                   Vancouver Public Library - Embroidery Resources List
                 </a>
               </li>
+              <li>
+                <a
+                  href="/EmbroideringWordsInstructions.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-embroidery-secondary hover:text-embroidery-primary transition-colors"
+                >
+                  Embroidering Words Instructions (PDF)
+                </a>
+              </li>
             </ul>
           </div>
         </div>

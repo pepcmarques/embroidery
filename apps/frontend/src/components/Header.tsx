@@ -2,7 +2,6 @@
 
 import { ThemeSwitcher } from '@repo/ui';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 import { useState } from 'react';
 import { IconCopy, IconCheck, IconMenu2 } from '@tabler/icons-react';
 import { HeaderMenu } from './HeaderMenu';

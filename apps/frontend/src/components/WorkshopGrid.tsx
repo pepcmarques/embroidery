@@ -3,15 +3,18 @@
 import { useState, useEffect } from 'react';
 import { WorkshopCard } from './WorkshopCard';
 import { Workshop } from '@repo/ui';
-import workshopsData from '../data/mnh/mhn.json';
 
 interface WorkshopGridProps {
   initialWorkshops?: Workshop[];
+  dataPath?: string;
 }
 
 const workshopsPerPage = 6;
 
-export const WorkshopGrid = ({ initialWorkshops }: WorkshopGridProps) => {
+export const WorkshopGrid = ({
+  initialWorkshops,
+  dataPath,
+}: WorkshopGridProps) => {
   const [workshops, setWorkshops] = useState<Workshop[] | null>(
     initialWorkshops || null
   );
@@ -24,14 +27,32 @@ export const WorkshopGrid = ({ initialWorkshops }: WorkshopGridProps) => {
     // Simulate API delay
     await new Promise((resolve) => setTimeout(resolve, 300));
 
-    let filteredWorkshops = workshopsData as Workshop[];
+    try {
+      let filteredWorkshops: Workshop[] = [];
 
-    // Sort workshops by date
-    filteredWorkshops = filteredWorkshops.sort(
-      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
-    );
+      if (dataPath) {
+        // Dynamically import the data file
+        const data = await import(`../data/${dataPath}`);
+        filteredWorkshops = data.default as Workshop[];
+      } else {
+        // Fallback for backward compatibility
+        const data = await import('../data/mnh/mhn.json');
+        filteredWorkshops = data.default as Workshop[];
+      }
 
-    setWorkshops(filteredWorkshops);
+      // Sort workshops by date if date field exists
+      filteredWorkshops = filteredWorkshops.sort((a, b) => {
+        if (a.date && b.date) {
+          return new Date(a.date).getTime() - new Date(b.date).getTime();
+        }
+        return 0;
+      });
+
+      setWorkshops(filteredWorkshops);
+    } catch (error) {
+      console.error('Failed to load workshops:', error);
+      setWorkshops([]);
+    }
     setIsLoading(false);
   };
 
@@ -39,7 +60,7 @@ export const WorkshopGrid = ({ initialWorkshops }: WorkshopGridProps) => {
     if (!initialWorkshops) {
       fetchWorkshops();
     }
-  }, []);
+  }, [dataPath]);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);

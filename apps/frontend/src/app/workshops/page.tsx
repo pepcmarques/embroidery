@@ -2,7 +2,25 @@ import Link from 'next/link';
 import Image from 'next/image';
 import workshopsData from '../../data/workshops.json';
 
+interface WorkshopData {
+  id: number;
+  type: string;
+  name: string;
+  image?: string;
+  message: string | string[];
+  url?: string;
+  data?: string;
+}
+
 export default function WorkshopsPage() {
+  const getWorkshopPhotoId = (workshop: WorkshopData): string => {
+    if (workshop.data) {
+      // Extract ID from data path like "mnh/mhn.json" -> "mnh"
+      return workshop.data.split('/')[0];
+    }
+    return 'mnh'; // Default fallback
+  };
+
   return (
     <div className="min-h-screen bg-embroidery-surface">
       {/* Header Section */}
@@ -66,7 +84,7 @@ export default function WorkshopsPage() {
                 href={
                   workshop.type === 'registration'
                     ? '/workshops/registration'
-                    : '/workshops/mnh'
+                    : `/workshops/photos/${getWorkshopPhotoId(workshop)}`
                 }
                 className={`inline-block bg-embroidery-primary text-white px-3 py-1.5 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors ${
                   workshop.image ? '' : 'absolute bottom-5 left-5'

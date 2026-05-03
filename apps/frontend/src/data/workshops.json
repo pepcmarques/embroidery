@@ -17,6 +17,14 @@
       "image": "/images/workshops/mnh/IMG_5056.jpg",
       "message": "",
       "data": "mnh/mhn.json"
+    },
+    {
+      "id": 2,
+      "type": "workshop",
+      "name": "VPL Kitsilano",
+      "image": "/images/workshops/kits/IMG_5215.jpg",
+      "message": "",
+      "data": "kits/kits.json"
     }
   ]
 }
