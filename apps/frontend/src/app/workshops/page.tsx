@@ -10,6 +10,7 @@ interface WorkshopData {
   message: string | string[];
   url?: string;
   data?: string;
+  hide?: boolean;
 }
 
 export default function WorkshopsPage() {
@@ -38,64 +39,66 @@ export default function WorkshopsPage() {
       {/* Workshops Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {workshopsData.workshops.map((workshop, index) => (
-            <div
-              key={workshop.id || index}
-              className={`bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
-                workshop.image ? 'h-auto' : 'min-h-64 relative'
-              }`}
-            >
-              {workshop.image && (
-                <div className="mb-4">
-                  <Image
-                    src={workshop.image}
-                    alt={workshop.name}
-                    width={400}
-                    height={300}
-                    className="w-full h-48 object-cover rounded-md"
-                  />
-                </div>
-              )}
-              <h3
-                className={`font-semibold text-embroidery-neutral mb-4 ${
-                  workshop.image ? 'text-xl' : 'text-2xl'
-                }`}
-              >
-                {workshop.name}
-              </h3>
+          {workshopsData.workshops
+            .filter((workshop) => !workshop.hide)
+            .map((workshop, index) => (
               <div
-                className={`text-embroidery-secondary ${
-                  workshop.image ? 'mb-4' : 'mb-4'
+                key={workshop.id || index}
+                className={`bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
+                  workshop.image ? 'h-auto' : 'min-h-64 relative'
                 }`}
               >
-                {Array.isArray(workshop.message)
-                  ? workshop.message.map((line, idx) => (
-                      <div key={idx} className="mb-2">
-                        {line.includes('<') ? (
-                          <span dangerouslySetInnerHTML={{ __html: line }} />
-                        ) : (
-                          line
-                        )}
-                      </div>
-                    ))
-                  : workshop.message}
+                {workshop.image && (
+                  <div className="mb-4">
+                    <Image
+                      src={workshop.image}
+                      alt={workshop.name}
+                      width={400}
+                      height={300}
+                      className="w-full h-48 object-cover rounded-md"
+                    />
+                  </div>
+                )}
+                <h3
+                  className={`font-semibold text-embroidery-neutral mb-4 ${
+                    workshop.image ? 'text-xl' : 'text-2xl'
+                  }`}
+                >
+                  {workshop.name}
+                </h3>
+                <div
+                  className={`text-embroidery-secondary ${
+                    workshop.image ? 'mb-4' : 'mb-4'
+                  }`}
+                >
+                  {Array.isArray(workshop.message)
+                    ? workshop.message.map((line, idx) => (
+                        <div key={idx} className="mb-2">
+                          {line.includes('<') ? (
+                            <span dangerouslySetInnerHTML={{ __html: line }} />
+                          ) : (
+                            line
+                          )}
+                        </div>
+                      ))
+                    : workshop.message}
+                </div>
+                <Link
+                  href={
+                    workshop.type === 'registration'
+                      ? '/workshops/registration'
+                      : `/workshops/photos/${getWorkshopPhotoId(workshop)}`
+                  }
+                  className={`inline-block bg-embroidery-primary text-white px-3 py-1.5 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors ${
+                    workshop.image ? '' : 'absolute bottom-5 left-5'
+                  }`}
+                >
+                  {workshop.type === 'registration'
+                    ? 'Register'
+                    : 'View Workshop'}
+                </Link>
               </div>
-              <Link
-                href={
-                  workshop.type === 'registration'
-                    ? '/workshops/registration'
-                    : `/workshops/photos/${getWorkshopPhotoId(workshop)}`
-                }
-                className={`inline-block bg-embroidery-primary text-white px-3 py-1.5 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors ${
-                  workshop.image ? '' : 'absolute bottom-5 left-5'
-                }`}
-              >
-                {workshop.type === 'registration'
-                  ? 'Register'
-                  : 'View Workshop'}
-              </Link>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </div>
