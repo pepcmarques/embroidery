@@ -71,6 +71,16 @@
   },
   {
     "id": "8",
+    "name": "Bookmarks",
+    "image": "/images/products/embroidery/bookmarks.jpg",
+    "description": "Bookmarks embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "9",
     "name": "Trust the process",
     "image": "/images/products/xstich/IMG_0812.jpg",
     "description": "Trust the process x-stich art.",
@@ -80,7 +90,7 @@
     "isActive": true
   },
   {
-    "id": "9",
+    "id": "10",
     "name": "Stay close...",
     "image": "/images/products/xstich/IMG_0813.jpg",
     "description": "Stay close to people who feel like sunshine x-stich art.",
@@ -90,7 +100,7 @@
     "isActive": true
   },
   {
-    "id": "10",
+    "id": "11",
     "name": "Stop overthinking",
     "image": "/images/products/xstich/IMG_0816.jpg",
     "description": "Stop overthinking x-stich art.",
@@ -100,7 +110,7 @@
     "isActive": true
   },
   {
-    "id": "11",
+    "id": "12",
     "name": "Self care isn't selfish",
     "image": "/images/products/xstich/IMG_0817.jpg",
     "description": "Self care isn't selfish x-stich art.",
@@ -110,7 +120,7 @@
     "isActive": true
   },
   {
-    "id": "12",
+    "id": "13",
     "name": "It's OK to have a bad day",
     "image": "/images/products/xstich/IMG_0818.jpg",
     "description": "It's OK to have a bad day x-stich art.",
@@ -120,7 +130,7 @@
     "isActive": true
   },
   {
-    "id": "13",
+    "id": "14",
     "name": "Do less with more focus",
     "image": "/images/products/xstich/IMG_0819.jpg",
     "description": "Do less with more focus x-stich art.",
@@ -130,7 +140,7 @@
     "isActive": true
   },
   {
-    "id": "14",
+    "id": "15",
     "name": "Today is a new day",
     "image": "/images/products/xstich/IMG_0820.jpg",
     "description": "Today is a new day x-stich art.",
@@ -140,7 +150,7 @@
     "isActive": true
   },
   {
-    "id": "15",
+    "id": "16",
     "name": "Time for positivi-tea",
     "image": "/images/products/xstich/IMG_0821.jpg",
     "description": "Time for positivi-tea x-stich art.",
@@ -150,7 +160,7 @@
     "isActive": true
   },
   {
-    "id": "16",
+    "id": "17",
     "name": "I am free to be me",
     "image": "/images/products/xstich/IMG_0822.jpg",
     "description": "I am free to be me x-stich art.",
@@ -160,7 +170,7 @@
     "isActive": true
   },
   {
-    "id": "17",
+    "id": "18",
     "name": "Slow down",
     "image": "/images/products/xstich/IMG_0842.jpg",
     "description": "Slow down x-stich art.",
@@ -170,7 +180,7 @@
     "isActive": true
   },
   {
-    "id": "18",
+    "id": "19",
     "name": "Marpole Neighborhood House",
     "image": "/images/products/embroidery/mnh.jpg",
     "description": "Marpole Neighborhood House embroidery art.",
@@ -180,19 +190,9 @@
     "isActive": true
   },
   {
-    "id": "19",
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth2.png",
-    "description": "Macbeth embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
     "id": "20",
     "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth3.png",
+    "image": "/images/products/embroidery/macabeth2.jpg",
     "description": "Macbeth embroidery art.",
     "price": 99.99,
     "category": "embroidery",
@@ -201,9 +201,9 @@
   },
   {
     "id": "21",
-    "name": "Marry Wives of Windsor",
-    "image": "/images/products/embroidery/Windsor.png",
-    "description": "Windsor embroidery art.",
+    "name": "Macbeth",
+    "image": "/images/products/embroidery/macabeth3.jpg",
+    "description": "Macbeth embroidery art.",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,
@@ -211,9 +211,9 @@
   },
   {
     "id": "22",
-    "name": "Happy Birthday Earrings",
-    "image": "/images/products/embroidery/earrings_1.png",
-    "description": "Earrings embroidery art.",
+    "name": "Marry Wives of Windsor",
+    "image": "/images/products/embroidery/Windsor.jpg",
+    "description": "Windsor embroidery art.",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,
@@ -221,8 +221,8 @@
   },
   {
     "id": "23",
-    "name": "Rainbow Earrings",
-    "image": "/images/products/embroidery/earrings_2.png",
+    "name": "Happy Birthday Earrings",
+    "image": "/images/products/embroidery/earrings_1.jpg",
     "description": "Earrings embroidery art.",
     "price": 99.99,
     "category": "embroidery",
@@ -231,8 +231,8 @@
   },
   {
     "id": "24",
-    "name": "Mapple Earrings",
-    "image": "/images/products/embroidery/earrings_3.png",
+    "name": "Rainbow Earrings",
+    "image": "/images/products/embroidery/earrings_2.jpg",
     "description": "Earrings embroidery art.",
     "price": 99.99,
     "category": "embroidery",
@@ -241,6 +241,16 @@
   },
   {
     "id": "25",
+    "name": "Mapple Earrings",
+    "image": "/images/products/embroidery/earrings_3.jpg",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "26",
     "name": "Quote - Shakespeare",
     "image": "/images/products/embroidery/quote01.jpg",
     "description": "Quote embroidery art.",
@@ -250,7 +260,7 @@
     "isActive": true
   },
   {
-    "id": "26",
+    "id": "27",
     "name": "Quote - Shakespeare",
     "image": "/images/products/embroidery/quote02.jpg",
     "description": "Quote embroidery art.",
@@ -260,7 +270,7 @@
     "isActive": true
   },
   {
-    "id": "27",
+    "id": "28",
     "name": "Quote - Shakespeare",
     "image": "/images/products/embroidery/quote03.jpg",
     "description": "Quote embroidery art.",
