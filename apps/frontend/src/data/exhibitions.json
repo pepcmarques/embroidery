@@ -1,0 +1,12 @@
+{
+  "exhibitions": [
+    {
+      "id": 1,
+      "type": "exhibition",
+      "name": "Marpole Neighborhood House Exhibition",
+      "image": "/images/exhibitions/mnh/cartaz.png",
+      "message": "",
+      "data": "exhibitions/mnh/mnh.json"
+    }
+  ]
+}
