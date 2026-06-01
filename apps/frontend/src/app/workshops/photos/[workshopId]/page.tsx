@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 const workshopDetails: Record<string, { title: string; dataPath: string }> = {
   mnh: {
     title: 'Marpole Neighbourhood House',
-    dataPath: 'mnh/mhn.json',
+    dataPath: 'mnh/mnh.json',
   },
   kits: {
     title: 'VPL Kitsilano',

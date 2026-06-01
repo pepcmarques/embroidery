@@ -36,7 +36,7 @@ export const WorkshopGrid = ({
         filteredWorkshops = data.default as Workshop[];
       } else {
         // Fallback for backward compatibility
-        const data = await import('../data/mnh/mhn.json');
+        const data = await import('../data/mnh/mnh.json');
         filteredWorkshops = data.default as Workshop[];
       }
 

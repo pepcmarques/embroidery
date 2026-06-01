@@ -16,7 +16,7 @@ interface WorkshopData {
 export default function WorkshopsPage() {
   const getWorkshopPhotoId = (workshop: WorkshopData): string => {
     if (workshop.data) {
-      // Extract ID from data path like "mnh/mhn.json" -> "mnh"
+      // Extract ID from data path like "mnh/mnh.json" -> "mnh"
       return workshop.data.split('/')[0];
     }
     return 'mnh'; // Default fallback
