@@ -278,5 +278,15 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "29",
+    "name": "Sunita Dhir - MLA",
+    "image": "/images/products/embroidery/SunitaDhir.jpg",
+    "description": "Sunita Dhir - MLA",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]
