@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import BuyMeACoffeeButton from '@/components/BuyMeACoffee';
 
 export default function About() {
   return (
@@ -60,6 +61,9 @@ export default function About() {
               </a>
               .
             </p>
+          </div>
+          <div className="mt-8 flex justify-center">
+            <BuyMeACoffeeButton />
           </div>
         </div>
       </section>
