@@ -288,5 +288,15 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "30",
+    "name": "Mirror - embroidery and watercolor",
+    "image": "/images/products/embroidery/Mirror_01.jpg",
+    "description": "Embroidery on watercolor art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]
