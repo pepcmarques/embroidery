@@ -298,5 +298,25 @@
     "category": "embroidery",
     "stock": 1,
     "isActive": true
+  },
+  {
+    "id": "31",
+    "name": "Mirror - Romeo and Juliet Story",
+    "image": "/images/products/embroidery/RJ_Mirror.jpeg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "id": "32",
+    "name": "Mirror - Romeo and Juliet",
+    "image": "/images/products/embroidery/RJ_Mirror_1.jpeg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
   }
 ]

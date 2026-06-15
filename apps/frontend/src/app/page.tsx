@@ -11,7 +11,7 @@ export default function Home() {
           </h2>
           <div className="text-center">
             <p className="text-embroidery-secondary mb-2">
-              Handmade with love. ❤️
+              Handmade in Vancouver. ❤️
             </p>
             <p className="text-sm">
               Contact:{' '}
