@@ -1,296 +1,23 @@
 [
   {
-    "id": "1",
-    "name": "Romeo and Juliet",
-    "image": "/images/products/embroidery/romeoJuliet.jpg",
-    "description": "Romeo and Juliet embroidery art.",
+    "name": "Mirror - Romeo and Juliet",
+    "image": "/images/products/embroidery/RJ_Mirror_1.jpg",
+    "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,
     "isActive": true
   },
   {
-    "id": "2",
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth.jpg",
-    "description": "Macbeth embroidery art.",
+    "name": "Mirror - Romeo and Juliet Story",
+    "image": "/images/products/embroidery/RJ_Mirror.jpg",
+    "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,
     "isActive": true
   },
   {
-    "id": "3",
-    "name": "Romeo and Juliet",
-    "image": "/images/products/embroidery/romeoJulietDance.jpg",
-    "description": "Romeo and Juliet embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "4",
-    "name": "King Lear",
-    "image": "/images/products/embroidery/kingLear.jpg",
-    "description": "King Lear embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "5",
-    "name": "VPL Marpole Mural",
-    "image": "/images/products/embroidery/marpoleVpl.jpg",
-    "description": "VPL Marpole Mural embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "6",
-    "name": "VPL Carnegie",
-    "image": "/images/products/embroidery/carnegieVpl.jpg",
-    "description": "VPL Carnegie embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "7",
-    "name": "VPL Terry Salman",
-    "image": "/images/products/embroidery/tsnVpl.jpg",
-    "description": "VPL Terry Salman embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "8",
-    "name": "Bookmarks",
-    "image": "/images/products/embroidery/bookmarks.jpg",
-    "description": "Bookmarks embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "9",
-    "name": "Trust the process",
-    "image": "/images/products/xstich/IMG_0812.jpg",
-    "description": "Trust the process x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "10",
-    "name": "Stay close...",
-    "image": "/images/products/xstich/IMG_0813.jpg",
-    "description": "Stay close to people who feel like sunshine x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "11",
-    "name": "Stop overthinking",
-    "image": "/images/products/xstich/IMG_0816.jpg",
-    "description": "Stop overthinking x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "12",
-    "name": "Self care isn't selfish",
-    "image": "/images/products/xstich/IMG_0817.jpg",
-    "description": "Self care isn't selfish x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "13",
-    "name": "It's OK to have a bad day",
-    "image": "/images/products/xstich/IMG_0818.jpg",
-    "description": "It's OK to have a bad day x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "14",
-    "name": "Do less with more focus",
-    "image": "/images/products/xstich/IMG_0819.jpg",
-    "description": "Do less with more focus x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "15",
-    "name": "Today is a new day",
-    "image": "/images/products/xstich/IMG_0820.jpg",
-    "description": "Today is a new day x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "16",
-    "name": "Time for positivi-tea",
-    "image": "/images/products/xstich/IMG_0821.jpg",
-    "description": "Time for positivi-tea x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "17",
-    "name": "I am free to be me",
-    "image": "/images/products/xstich/IMG_0822.jpg",
-    "description": "I am free to be me x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "18",
-    "name": "Slow down",
-    "image": "/images/products/xstich/IMG_0842.jpg",
-    "description": "Slow down x-stich art.",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "19",
-    "name": "Marpole Neighborhood House",
-    "image": "/images/products/embroidery/mnh.jpg",
-    "description": "Marpole Neighborhood House embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "20",
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth2.jpg",
-    "description": "Macbeth embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "21",
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth3.jpg",
-    "description": "Macbeth embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "22",
-    "name": "Marry Wives of Windsor",
-    "image": "/images/products/embroidery/Windsor.jpg",
-    "description": "Windsor embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "23",
-    "name": "Happy Birthday Earrings",
-    "image": "/images/products/embroidery/earrings_1.jpg",
-    "description": "Earrings embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "24",
-    "name": "Rainbow Earrings",
-    "image": "/images/products/embroidery/earrings_2.jpg",
-    "description": "Earrings embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "25",
-    "name": "Mapple Earrings",
-    "image": "/images/products/embroidery/earrings_3.jpg",
-    "description": "Earrings embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "26",
-    "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote01.jpg",
-    "description": "Quote embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "27",
-    "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote02.jpg",
-    "description": "Quote embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "28",
-    "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote03.jpg",
-    "description": "Quote embroidery art.",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "29",
-    "name": "Sunita Dhir - MLA",
-    "image": "/images/products/embroidery/SunitaDhir.jpg",
-    "description": "Sunita Dhir - MLA",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "id": "30",
     "name": "Mirror - embroidery and watercolor",
     "image": "/images/products/embroidery/Mirror_01.jpg",
     "description": "Embroidery on watercolor art",
@@ -300,20 +27,261 @@
     "isActive": true
   },
   {
-    "id": "31",
-    "name": "Mirror - Romeo and Juliet Story",
-    "image": "/images/products/embroidery/RJ_Mirror.jpeg",
-    "description": "Embroidery art",
+    "name": "Sunita Dhir - MLA",
+    "image": "/images/products/embroidery/SunitaDhir.jpg",
+    "description": "Sunita Dhir - MLA",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,
     "isActive": true
   },
   {
-    "id": "32",
-    "name": "Mirror - Romeo and Juliet",
-    "image": "/images/products/embroidery/RJ_Mirror_1.jpeg",
-    "description": "Embroidery art",
+    "name": "Romeo and Juliet",
+    "image": "/images/products/embroidery/romeoJuliet.jpg",
+    "description": "Romeo and Juliet embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Macbeth",
+    "image": "/images/products/embroidery/macabeth.jpg",
+    "description": "Macbeth embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Romeo and Juliet",
+    "image": "/images/products/embroidery/romeoJulietDance.jpg",
+    "description": "Romeo and Juliet embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "King Lear",
+    "image": "/images/products/embroidery/kingLear.jpg",
+    "description": "King Lear embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "VPL Marpole Mural",
+    "image": "/images/products/embroidery/marpoleVpl.jpg",
+    "description": "VPL Marpole Mural embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "VPL Carnegie",
+    "image": "/images/products/embroidery/carnegieVpl.jpg",
+    "description": "VPL Carnegie embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "VPL Terry Salman",
+    "image": "/images/products/embroidery/tsnVpl.jpg",
+    "description": "VPL Terry Salman embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Bookmarks",
+    "image": "/images/products/embroidery/bookmarks.jpg",
+    "description": "Bookmarks embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Trust the process",
+    "image": "/images/products/xstich/IMG_0812.jpg",
+    "description": "Trust the process x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Stay close...",
+    "image": "/images/products/xstich/IMG_0813.jpg",
+    "description": "Stay close to people who feel like sunshine x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Stop overthinking",
+    "image": "/images/products/xstich/IMG_0816.jpg",
+    "description": "Stop overthinking x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Self care isn't selfish",
+    "image": "/images/products/xstich/IMG_0817.jpg",
+    "description": "Self care isn't selfish x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "It's OK to have a bad day",
+    "image": "/images/products/xstich/IMG_0818.jpg",
+    "description": "It's OK to have a bad day x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Do less with more focus",
+    "image": "/images/products/xstich/IMG_0819.jpg",
+    "description": "Do less with more focus x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Today is a new day",
+    "image": "/images/products/xstich/IMG_0820.jpg",
+    "description": "Today is a new day x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Time for positivi-tea",
+    "image": "/images/products/xstich/IMG_0821.jpg",
+    "description": "Time for positivi-tea x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "I am free to be me",
+    "image": "/images/products/xstich/IMG_0822.jpg",
+    "description": "I am free to be me x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Slow down",
+    "image": "/images/products/xstich/IMG_0842.jpg",
+    "description": "Slow down x-stich art.",
+    "price": 99.99,
+    "category": "x-stich",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Marpole Neighborhood House",
+    "image": "/images/products/embroidery/mnh.jpg",
+    "description": "Marpole Neighborhood House embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Macbeth",
+    "image": "/images/products/embroidery/macabeth2.jpg",
+    "description": "Macbeth embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Macbeth",
+    "image": "/images/products/embroidery/macabeth3.jpg",
+    "description": "Macbeth embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Marry Wives of Windsor",
+    "image": "/images/products/embroidery/Windsor.jpg",
+    "description": "Windsor embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Happy Birthday Earrings",
+    "image": "/images/products/embroidery/earrings_1.jpg",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Rainbow Earrings",
+    "image": "/images/products/embroidery/earrings_2.jpg",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Mapple Earrings",
+    "image": "/images/products/embroidery/earrings_3.jpg",
+    "description": "Earrings embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Quote - Shakespeare",
+    "image": "/images/products/embroidery/quote01.jpg",
+    "description": "Quote embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Quote - Shakespeare",
+    "image": "/images/products/embroidery/quote02.jpg",
+    "description": "Quote embroidery art.",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Quote - Shakespeare",
+    "image": "/images/products/embroidery/quote03.jpg",
+    "description": "Quote embroidery art.",
     "price": 99.99,
     "category": "embroidery",
     "stock": 1,

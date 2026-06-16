@@ -93,8 +93,8 @@ export const WorkshopGrid = ({
         <>
           {workshops.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {getCurrentPageWorkshops().map((workshop) => (
-                <WorkshopCard key={workshop.id} workshop={workshop} />
+              {getCurrentPageWorkshops().map((workshop, index) => (
+                <WorkshopCard key={index} workshop={workshop} />
               ))}
             </div>
           ) : (

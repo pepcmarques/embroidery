@@ -3,7 +3,6 @@ import Image from 'next/image';
 import ExhibitionsData from '../../data/exhibitions.json';
 
 interface ExhibitionData {
-  id: number;
   type: string;
   name: string;
   image?: string;
@@ -41,7 +40,7 @@ export default function ExhibitionsPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {ExhibitionsData.exhibitions.map((Exhibition, index) => (
             <div
-              key={Exhibition.id || index}
+              key={index}
               className={`bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
                 Exhibition.image ? 'h-auto' : 'min-h-64 relative'
               }`}

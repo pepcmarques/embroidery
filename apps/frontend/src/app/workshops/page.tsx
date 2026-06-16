@@ -3,7 +3,6 @@ import Image from 'next/image';
 import workshopsData from '../../data/workshops.json';
 
 interface WorkshopData {
-  id: number;
   type: string;
   name: string;
   image?: string;
@@ -43,7 +42,7 @@ export default function WorkshopsPage() {
             .filter((workshop) => !workshop.hide)
             .map((workshop, index) => (
               <div
-                key={workshop.id || index}
+                key={index}
                 className={`bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
                   workshop.image ? 'h-auto' : 'min-h-64 relative'
                 }`}
