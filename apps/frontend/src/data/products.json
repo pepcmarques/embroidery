@@ -1,7 +1,7 @@
 [
   {
     "name": "Mirror - Romeo and Juliet",
-    "image": "/images/products/embroidery/RJMirror1.jpg",
+    "image": "/images/products/embroidery/mirrorRJ1.jpg",
     "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Mirror - Romeo and Juliet Story",
-    "image": "/images/products/embroidery/RJMirror.jpg",
+    "image": "/images/products/embroidery/mirrorRJ.jpg",
     "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
