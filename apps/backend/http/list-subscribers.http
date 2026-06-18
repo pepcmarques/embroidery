@@ -1,8 +1,0 @@
-### List All Subscribers
-
-GET http://localhost:4000/subscribers/list
-x-admin-key: QualquerCoisaQueVoceQuiserColocarAqui
-
-### Response
-
-Expected: 200 OK with array of subscribers.
