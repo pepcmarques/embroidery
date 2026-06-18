@@ -1,3 +1,3 @@
-# Embroidery Expo
+# Embroidery Frontend
 
-A professional embroidery expo.
+This is the frontend.
