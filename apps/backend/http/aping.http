@@ -1,0 +1,7 @@
+### Add Subscriber
+
+GET  http://localhost:4000/
+
+### Response
+
+Expected: 200 Created with subscriber data.

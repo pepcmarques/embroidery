@@ -1,0 +1,12 @@
+### Unsubscribe
+
+POST http://localhost:4000/subscribers/unsubscribe
+Content-Type: application/json
+
+{
+  "email": "john@example.com"
+}
+
+### Response
+
+Expected: 200 OK with updated subscriber data.

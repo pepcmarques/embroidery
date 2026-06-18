@@ -3,13 +3,15 @@
 import { ThemeSwitcher } from '@repo/ui';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { IconCopy, IconCheck, IconMenu2 } from '@tabler/icons-react';
+import { IconCopy, IconCheck, IconMenu2, IconMail } from '@tabler/icons-react';
 import { HeaderMenu } from './HeaderMenu';
+import { useRouter } from 'next/navigation';
 
 export const Header = () => {
   const pathname = usePathname();
   const [copied, setCopied] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
 
   const copyEmail = async () => {
     try {
@@ -35,7 +37,7 @@ export const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 relative">
               <a
                 href="/"
                 className="text-2xl font-bold text-embroidery-primary"
@@ -68,7 +70,18 @@ export const Header = () => {
                     </>
                   )}
                 </button>
-              </div>{' '}
+              </div>
+              {/* Subscribe Email - Desktop Only */}
+              <div className="hidden lg:flex items-center">
+                <button
+                  onClick={() => router.push('/subscribe')}
+                  className="text-sm text-embroidery-secondary hover:text-embroidery-primary transition-colors flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-embroidery-primary/10"
+                  title="Click to subscribe"
+                >
+                  <IconMail className="w-4 h-4" />
+                  <span>Subscribe</span>
+                </button>
+              </div>
               {/* Theme Toggle */}
               <ThemeSwitcher />
               {/* Mobile menu button */}
