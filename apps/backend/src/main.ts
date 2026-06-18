@@ -1,32 +1,25 @@
-import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { ExpressAdapter } from '@nestjs/platform-express';
-import express from 'express';
-import serverless from 'serverless-http';
 
-let cachedHandler: any;
+let app: any;
 
-async function createServer() {
-  const expressApp = express();
-
-  const app = await NestFactory.create(
-    AppModule,
-    new ExpressAdapter(expressApp),
-  );
-
-  app.enableCors({
-    origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
-  });
-
-  await app.init();
-
-  return serverless(expressApp);
+async function bootstrap() {
+  if (!app) {
+    app = await NestFactory.create(AppModule);
+    app.enableCors();
+    await app.init();
+  }
+  return app;
 }
 
-export default async function handler(req, res) {
-  if (!cachedHandler) {
-    cachedHandler = await createServer();
-  }
-  return cachedHandler(req, res);
+// For local dev
+if (process.env.NODE_ENV !== 'production') {
+  bootstrap().then(app => app.listen(4000));
+}
+
+// For Vercel serverless
+export default async function handler(req: any, res: any) {
+  const app = await bootstrap();
+  const server = app.getHttpAdapter().getInstance();
+  server(req, res);
 }
