@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Product } from '@repo/ui';
-import { Card, CardContent } from '@repo/ui';
+import { Product } from '../components/ui/product.types';
+import { Card, CardContent } from '../components/ui/Card';
 import { ImageModal } from './ImageModal';
 
 interface ProductCardProps {

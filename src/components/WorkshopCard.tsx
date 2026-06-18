@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Workshop } from '@repo/ui';
-import { Card } from '@repo/ui';
+import { Workshop } from '../components/ui/types';
+import { Card } from '../components/ui/Card';
 import { ImageModal } from './ImageModal';
 
 interface WorkshopCardProps {

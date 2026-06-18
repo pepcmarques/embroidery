@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { WorkshopCard } from './WorkshopCard';
-import { Workshop } from '@repo/ui';
+import { Workshop } from '../components/ui/types';
 
 interface WorkshopGridProps {
   initialWorkshops?: Workshop[];

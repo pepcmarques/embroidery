@@ -1,31 +1,32 @@
 {
-  "name": "embroidery-monorepo",
-  "version": "1.0.0",
-  "description": "A monorepo with NextJS frontend and NestJS backend",
+  "name": "frontend",
+  "version": "0.1.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "clean": "turbo clean && rm -rf node_modules",
-    "test": "turbo test"
-  },
-  "devDependencies": {
-    "@turbo/gen": "^2.5.8",
-    "prettier": "^3.6.2",
-    "turbo": "^2.5.8",
-    "typescript": "^5.9.2"
-  },
-  "packageManager": "npm@11.6.1",
-  "engines": {
-    "node": ">=18.0.0"
+    "dev": "next dev --port 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "clean": "rm -rf .next"
   },
   "dependencies": {
-    "next": "^15.5.7"
+    "@tabler/icons-react": "^3.35.0",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@next/eslint-plugin-next": "^15.5.4",
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.14",
+    "@types/react-dom": "^19.1.9",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.36.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "typescript": "5.9.2"
   }
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { ThemeSwitcher } from '@repo/ui';
+import { ThemeSwitcher } from '../components/ui/ThemeToggle';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { IconCopy, IconCheck, IconMenu2, IconMail } from '@tabler/icons-react';

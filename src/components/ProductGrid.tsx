@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import { ProductCard } from './ProductCard';
-import { Product } from '@repo/ui';
-import { Button } from '@repo/ui';
+import { Product } from '../components/ui/product.types';
+import { Button } from '../components/ui/Button';
 import productsData from '../data/products.json';
 
 interface ProductGridProps {
