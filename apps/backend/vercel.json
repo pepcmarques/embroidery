@@ -1,7 +1,15 @@
 {
-  "functions": {
-    "api/serverless.ts": {
-      "runtime": "nodejs20.x"
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.serverless.ts",
+      "use": "@vercel/node"
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/main.serverless.ts"
+    }
+  ]
 }
