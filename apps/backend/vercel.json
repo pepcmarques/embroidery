@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/serverless.ts": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}
