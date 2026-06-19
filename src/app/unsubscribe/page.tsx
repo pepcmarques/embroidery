@@ -1,10 +1,12 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 export default function SubscribePage() {
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
+  const emailRef = useRef<HTMLInputElement>(null);
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.target as HTMLFormElement;
@@ -30,6 +32,7 @@ export default function SubscribePage() {
       form.reset();
     } catch (err: any) {
       setError(`Error subscribing ${formData.get('email')}`);
+      emailRef.current?.focus();
       setStatus(null);
     }
   };
@@ -56,6 +59,7 @@ export default function SubscribePage() {
         className="flex flex-col justify-center items-center gap-4"
       >
         <input
+          ref={emailRef}
           type="email"
           name="email"
           required
