@@ -124,9 +124,7 @@ export const Header = () => {
                     </>
                   )}
                 </button>
-              </div>
-              {/* Subscribe Email - Mobile */}
-              <div className="hidden lg:flex items-center">
+                {/* Subscribe Email - Mobile */}
                 <button
                   onClick={() => router.push('/subscribe')}
                   className="text-sm text-embroidery-secondary hover:text-embroidery-primary transition-colors flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-embroidery-primary/10"
@@ -136,7 +134,6 @@ export const Header = () => {
                   <span>Subscribe</span>
                 </button>
               </div>
-
             </div>
           )}
         </div>
