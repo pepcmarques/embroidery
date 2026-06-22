@@ -115,12 +115,12 @@ export const Header = () => {
                   {copied ? (
                     <>
                       <IconCheck className="w-4 h-4 text-green-500" />
-                      <span className="text-green-500">Email copied!</span>
+                      <span className="text-green-500">Copied!</span>
                     </>
                   ) : (
                     <>
                       <IconCopy className="w-4 h-4" />
-                      <span>Copy Email: racheltorres.uff@gmail.com</span>
+                      <span>Copy Email</span>
                     </>
                   )}
                 </button>
