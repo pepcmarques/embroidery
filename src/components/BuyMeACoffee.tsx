@@ -9,7 +9,7 @@ export default function BuyMeACoffeeButton() {
     >
       <img
         src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-        alt="Buy Me A Coffee"
+        alt="Support Us"
         width={217}
         height={60}
       />

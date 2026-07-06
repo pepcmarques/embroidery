@@ -71,17 +71,6 @@ export const Header = () => {
                   )}
                 </button>
               </div>
-              {/* Subscribe Email - Desktop Only */}
-              <div className="hidden lg:flex items-center">
-                <button
-                  onClick={() => router.push('/subscribe')}
-                  className="text-sm text-embroidery-secondary hover:text-embroidery-primary transition-colors flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-embroidery-primary/10"
-                  title="Click to subscribe"
-                >
-                  <IconMail className="w-4 h-4" />
-                  <span>Subscribe</span>
-                </button>
-              </div>
               {/* Theme Toggle */}
               <ThemeSwitcher />
               {/* Mobile menu button */}
@@ -123,15 +112,6 @@ export const Header = () => {
                       <span>Copy Email</span>
                     </>
                   )}
-                </button>
-                {/* Subscribe Email - Mobile */}
-                <button
-                  onClick={() => router.push('/subscribe')}
-                  className="text-sm text-embroidery-secondary hover:text-embroidery-primary transition-colors flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-embroidery-primary/10"
-                  title="Click to subscribe"
-                >
-                  <IconMail className="w-4 h-4" />
-                  <span>Subscribe</span>
                 </button>
               </div>
             </div>

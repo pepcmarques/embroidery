@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import workshopsData from '../../data/workshops.json';
+import SubscribeComponent from '@/components/Subscribe';
 
 interface WorkshopData {
   type: string;
@@ -99,6 +100,12 @@ export default function WorkshopsPage() {
               </div>
             ))}
         </div>
+      </div>
+      <div className="bg-embroidery-surface justify-center items-center mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <h1 className="text-xl font-bold text-embroidery-primary mb-6 text-center">
+          Keep informed about the next workshops and events!
+        </h1>
+        <SubscribeComponent />
       </div>
     </div>
   );

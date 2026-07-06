@@ -52,7 +52,7 @@ export default function About() {
               Contact
             </h2>
             <p className="text-embroidery-secondary">
-              Have questions? Reach out at{' '}
+              Have questions? Reach out at
               <a
                 href="mailto:racheltorresmail@gmail.com"
                 className="text-embroidery-primary hover:underline"

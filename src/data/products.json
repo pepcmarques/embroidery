@@ -27,6 +27,15 @@
     "isActive": true
   },
   {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin04.png",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
     "name": "Mirror - Romeo and Juliet",
     "image": "/images/products/embroidery/mirrorRJ1.jpg",
     "description": "Embroidery art",
