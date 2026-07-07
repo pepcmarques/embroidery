@@ -37,7 +37,7 @@ export const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <div className="flex-shrink-0 relative">
+            <div className="shrink-0 relative">
               <a
                 href="/"
                 className="text-2xl font-bold text-embroidery-primary"
@@ -51,24 +51,20 @@ export const Header = () => {
 
             {/* Right side */}
             <div className="flex items-center space-x-4">
-              {/* Contact Email - Desktop Only */}
+              {/* Subscribe - Desktop Only */}
               <div className="hidden lg:flex items-center">
                 <button
-                  onClick={copyEmail}
+                  onClick={() => router.push('/subscribe')}
                   className="text-sm text-embroidery-secondary hover:text-embroidery-primary transition-colors flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-embroidery-primary/10"
-                  title="Click to copy email address"
+                  title="Go to subscribe page"
                 >
-                  {copied ? (
-                    <>
-                      <IconCheck className="w-4 h-4 text-green-500" />
-                      <span className="text-green-500">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <IconCopy className="w-4 h-4" />
-                      <span>Contact</span>
-                    </>
-                  )}
+                  <>
+                    <IconMail className="w-8 h-8" />
+                    <div className="flex flex-col text-left">
+                      <div>Want to know about </div>
+                      <div>our next workshops?</div>
+                    </div>
+                  </>
                 </button>
               </div>
               {/* Theme Toggle */}
@@ -112,6 +108,17 @@ export const Header = () => {
                       <span>Copy Email</span>
                     </>
                   )}
+                </button>
+                {/* Subscribe - Desktop Only */}
+                <button
+                  onClick={() => router.push('/subscribe')}
+                  className="text-sm text-embroidery-secondary hover:text-embroidery-primary transition-colors flex items-center space-x-1 px-2 py-1 rounded-md hover:bg-embroidery-primary/10"
+                  title="Go to subscribe page"
+                >
+                  <>
+                    <IconMail className="w-4 h-4" />
+                    <span>Want to know about next workshops?</span>
+                  </>
                 </button>
               </div>
             </div>

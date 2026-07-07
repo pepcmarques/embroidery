@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-export default function SubscribePage() {
+export default function UnsubscribePage() {
   const [status, setStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 

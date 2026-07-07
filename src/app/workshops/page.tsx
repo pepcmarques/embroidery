@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import workshopsData from '../../data/workshops.json';
-import SubscribeComponent from '@/components/Subscribe';
 
 interface WorkshopData {
   type: string;
@@ -101,11 +100,30 @@ export default function WorkshopsPage() {
             ))}
         </div>
       </div>
-      <div className="bg-embroidery-surface justify-center items-center mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <h1 className="text-xl font-bold text-embroidery-primary mb-6 text-center">
-          Keep informed about the next workshops and events!
+      <div className="bg-yellow-400 justify-center items-center mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <h1 className="text-xl font-bold text-embroidery-surface mb-6 text-center">
+          Thank you to...
         </h1>
-        <SubscribeComponent />
+        <div className="flex justify-center items-center gap-16 flex-wrap">
+          <Image
+            src="/images/vflogo.png"
+            alt="Vancouver Foundation"
+            width={200}
+            height={150}
+          />
+          <Image
+            src="/images/uweologo.png"
+            alt="United Way"
+            width={200}
+            height={150}
+          />
+          <Image
+            src="/images/bardlogo.png"
+            alt="Bard on the Beach"
+            width={90}
+            height={68}
+          />
+        </div>
       </div>
     </div>
   );

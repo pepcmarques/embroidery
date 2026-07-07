@@ -35,10 +35,19 @@ export default function SubscribeComponent() {
   };
 
   return (
-    <div
-      className="bg-embroidery-surface"
-      style={{ minHeight: 'calc(100vh - 150px)' }}
-    >
+    <div className="max-w-3xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center" style={{ minHeight: 'calc(100vh - 150px)' }}>
+      <h1 className="text-4xl font-bold text-embroidery-primary mb-4">
+        Subscribe
+      </h1>
+      <div className="flex flex-col">
+        <span className="text-lg text-embroidery-secondary mb-2">
+          Want to know more about our next workshops?
+        </span>
+        <span className="text-lg text-embroidery-secondary mb-8">
+          Enter your email below to subscribe.
+        </span>
+      </div>
+
       {status && (
         <p className="text-embroidery-primary font-medium mb-4 text-center">
           {status}
