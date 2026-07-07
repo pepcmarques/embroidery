@@ -102,9 +102,9 @@ export default function WorkshopsPage() {
       </div>
       <div className="bg-yellow-400 justify-center items-center mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <h1 className="text-xl font-bold text-embroidery-surface mb-6 text-center">
-          Thank you to...
+          Thanks to...
         </h1>
-        <div className="flex justify-center items-center gap-16 flex-wrap">
+        <div className="flex justify-center items-center gap-16 flex-wrap max-w-5xl mx-auto">
           <Image
             src="/images/vflogo.png"
             alt="Vancouver Foundation"
@@ -122,6 +122,30 @@ export default function WorkshopsPage() {
             alt="Bard on the Beach"
             width={90}
             height={68}
+          />
+          <Image
+            src="/images/anhlogo.png"
+            alt="Arbutus Neighbourhood House"
+            width={160}
+            height={100}
+          />
+          <Image
+            src="/images/mnhlogo.png"
+            alt="Marpole Neighbourhood House"
+            width={200}
+            height={150}
+          />
+          <Image
+            src="/images/vpllogo.svg"
+            alt="Vancouver Public Library"
+            width={200}
+            height={150}
+          />
+          <Image
+            src="/images/nsglogo.svg"
+            alt="Neighbourhood Small Grants"
+            width={150}
+            height={100}
           />
         </div>
       </div>
