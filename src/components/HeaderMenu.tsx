@@ -29,7 +29,7 @@ export const HeaderMenu = ({
             key={item.href}
             href={item.href}
             onClick={onLinkClick}
-            className={`px-3 py-2 text-sm font-medium transition-colors ${
+            className={`px-3 py-2 text-lg font-medium transition-colors ${
               pathname === item.href
                 ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
                 : 'text-embroidery-secondary hover:text-embroidery-primary'

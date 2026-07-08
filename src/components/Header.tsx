@@ -40,9 +40,12 @@ export const Header = () => {
             <div className="shrink-0 relative">
               <a
                 href="/"
-                className="text-2xl font-bold text-embroidery-primary"
+                className="text-lg font-bold text-embroidery-primary"
               >
-                Rachel Torres
+                <div className="flex flex-col">
+                  <span>Embroidering Words</span>
+                  
+                </div>
               </a>
             </div>
 
@@ -61,8 +64,8 @@ export const Header = () => {
                   <>
                     <IconMail className="w-8 h-8" />
                     <div className="flex flex-col text-left">
-                      <div>Want to know about </div>
-                      <div>our next workshops?</div>
+                      <span>Want to know about </span>
+                      <span>our next workshops?</span>
                     </div>
                   </>
                 </button>

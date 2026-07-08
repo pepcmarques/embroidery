@@ -29,7 +29,13 @@ export default function WorkshopsPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Workshops</h1>
             <p className="text-xl">
-              Discover our embroidery workshops and registration options
+              Let me know if you want to take part of the next workshops.{' '}
+              <Link
+                href="/subscribe"
+                className="text-embroidery-surface p-3 hover:bg-embroidery-secondary transition-colors"
+              >
+                Click here.
+              </Link>{' '}
             </p>
           </div>
         </div>
@@ -100,53 +106,63 @@ export default function WorkshopsPage() {
             ))}
         </div>
       </div>
-      <div className="bg-yellow-400 justify-center items-center mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <h1 className="text-xl font-bold text-embroidery-surface mb-6 text-center">
-          Thanks to...
+      <div className="bg-white justify-center items-center mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <h1 className="text-2xl font-bold text-embroidery-primary mb-6 text-center">
+          Thank you
         </h1>
-        <div className="flex justify-center items-center gap-16 flex-wrap max-w-5xl mx-auto">
-          <Image
-            src="/images/vflogo.png"
-            alt="Vancouver Foundation"
-            width={200}
-            height={150}
-          />
-          <Image
-            src="/images/uweologo.png"
-            alt="United Way"
-            width={200}
-            height={150}
-          />
-          <Image
-            src="/images/bardlogo.png"
-            alt="Bard on the Beach"
-            width={90}
-            height={68}
-          />
-          <Image
-            src="/images/anhlogo.png"
-            alt="Arbutus Neighbourhood House"
-            width={160}
-            height={100}
-          />
-          <Image
-            src="/images/mnhlogo.png"
-            alt="Marpole Neighbourhood House"
-            width={200}
-            height={150}
-          />
-          <Image
-            src="/images/vpllogo.svg"
-            alt="Vancouver Public Library"
-            width={200}
-            height={150}
-          />
-          <Image
-            src="/images/nsglogo.svg"
-            alt="Neighbourhood Small Grants"
-            width={150}
-            height={100}
-          />
+        <div className="flex flex-col justify-center items-center gap-8 max-w-5xl mx-auto mb-4">
+          <div className="flex justify-center items-center gap-12">
+            <Link href="https://uwbc.ca" target="_blank">
+              <Image
+                src="/images/uweologo.png"
+                alt="United Way"
+                width={200}
+                height={150}
+              />
+            </Link>
+            <Link href="https://neighbourhoodsmallgrants.ca" target="_blank">
+              <Image
+                src="/images/nsglogo.svg"
+                alt="Neighbourhood Small Grants"
+                width={150}
+                height={100}
+              />
+            </Link>
+          </div>
+          <div className="flex justify-center items-center gap-12">
+            <Link href="https://marpolenh.org" target="_blank">
+              <Image
+                src="/images/mnhlogo.png"
+                alt="Marpole Neighbourhood House"
+                width={200}
+                height={150}
+              />
+            </Link>
+            <Link href="https://arbutusnh.org" target="_blank">
+              <Image
+                src="/images/anhlogo.png"
+                alt="Arbutus Neighbourhood House"
+                width={160}
+                height={100}
+              />
+            </Link>
+            <Link href="https://www.bardonthebeach.org" target="_blank">
+              <Image
+                src="/images/bardlogo.png"
+                alt="Bard on the Beach"
+                width={90}
+                height={68}
+              />
+            </Link>
+            <Link href="https://www.vpl.ca" target="_blank">
+              <Image
+                src="/images/vpllogo.svg"
+                alt="Vancouver Public Library"
+                width={200}
+                height={150}
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

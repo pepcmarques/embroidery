@@ -23,6 +23,13 @@
       "image": "/images/workshops/kits/IMG_5215.jpg",
       "message": "",
       "data": "kits/kits.json"
+    },
+    {
+      "type": "workshop",
+      "name": "ANH Kitsilano",
+      "image": "/images/workshops/anh/IMG_001.jpg",
+      "message": "",
+      "data": "anh/anh.json"
     }
   ]
 }

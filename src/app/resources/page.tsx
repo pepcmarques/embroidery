@@ -1,4 +1,21 @@
+import Link from 'next/link';
+
 export default function Resources() {
+  const resources = [
+    {
+      name: 'Vancouver Public Library - Craft & Hobby Digital Resources',
+      url: 'https://www.vpl.ca/digital-library/craft-hobby',
+    },
+    {
+      name: 'Vancouver Public Library - Embroidery Resources List',
+      url: 'https://vpl.bibliocommons.com/v2/list/display/534329910/3006299297',
+    },
+    {
+      name: 'Embroidering Words Instructions (PDF)',
+      url: '/EmbroideringWordsInstructions.pdf',
+    },
+  ];
+
   return (
     <div
       className="bg-embroidery-surface"
@@ -12,40 +29,21 @@ export default function Resources() {
           </h2>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="bg-embroidery-background rounded-lg shadow-md p-6">
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="https://www.vpl.ca/digital-library/craft-hobby"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-embroidery-secondary hover:text-embroidery-primary transition-colors"
-                >
-                  Vancouver Public Library - Craft & Hobby Digital Resources
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://vpl.bibliocommons.com/v2/list/display/534329910/3006299297"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-embroidery-secondary hover:text-embroidery-primary transition-colors"
-                >
-                  Vancouver Public Library - Embroidery Resources List
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/EmbroideringWordsInstructions.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-embroidery-secondary hover:text-embroidery-primary transition-colors"
-                >
-                  Embroidering Words Instructions (PDF)
-                </a>
-              </li>
-            </ul>
-          </div>
+          {resources.map((resource, index) => (
+            <Link
+              key={index}
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xl text-embroidery-secondary hover:text-embroidery-primary transition-colors"
+            >
+              <div
+                className="bg-embroidery-background rounded-lg shadow-md p-6 mb-8"
+              >
+                {resource.name}
+              </div>
+            </Link>
+          ))}
         </div>
       </section>
     </div>

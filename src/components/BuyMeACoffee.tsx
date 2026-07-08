@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 
 export default function BuyMeACoffeeButton() {
   return (
@@ -7,11 +8,12 @@ export default function BuyMeACoffeeButton() {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <img
-        src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+      <Image
+        //src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+        src="/images/support-us.png"
         alt="Support Us"
-        width={217}
-        height={60}
+        width={250}
+        height={100}
       />
     </a>
   );

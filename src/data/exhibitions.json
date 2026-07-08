@@ -2,7 +2,7 @@
   "exhibitions": [
     {
       "type": "exhibition",
-      "name": "Marpole Neighborhood House Exhibition",
+      "name": "MNH Art Show 2026",
       "image": "/images/exhibitions/mnh/cartaz.png",
       "message": "",
       "data": "exhibitions/mnh/mnh.json"

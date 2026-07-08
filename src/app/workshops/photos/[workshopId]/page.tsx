@@ -2,7 +2,6 @@
 
 import { useParams } from 'next/navigation';
 import { WorkshopGrid } from '../../../../components/WorkshopGrid';
-import { useState, useEffect } from 'react';
 
 const workshopDetails: Record<string, { title: string; dataPath: string }> = {
   mnh: {
@@ -12,6 +11,10 @@ const workshopDetails: Record<string, { title: string; dataPath: string }> = {
   kits: {
     title: 'VPL Kitsilano',
     dataPath: 'kits/kits.json',
+  },
+  anh: {
+    title: 'Arbutus Neighbourhood House',
+    dataPath: 'anh/anh.json',
   },
 };
 
