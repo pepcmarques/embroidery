@@ -8,7 +8,7 @@ export default function About() {
       style={{ minHeight: 'calc(100vh - 150px)' }}
     >
       {/* About Section */}
-      <section id="about" className="py-16">
+      <section id="about" className="py-16 gap-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-embroidery-primary mb-4">
             About Us
@@ -46,67 +46,40 @@ export default function About() {
               </p>
             </div>
           </div>
+          <div className="flex gap-6 bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
+            {/* Profile Image - Floated Left */}
+            <Image
+              src="/images/Giulia-Embroidery1.jpg"
+              alt="Giulia - Embroidery Artist"
+              width={176}
+              height={176}
+              className="object-cover"
+              sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
+            />
 
-          <div className="bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
-            <div className="relative">
-              {/* Profile Image - Floated Left */}
-              <div className="float-left mr-6 mb-4">
-                <div className="relative w-44 h-44 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-lg overflow-hidden shadow-md">
-                  <Image
-                    src="/images/Giulia-Embroidery1.jpg"
-                    alt="Giulia - Embroidery Artist"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
-                  />
-                </div>
-              </div>
-
-              {/* About Text - Wraps Around Image */}
-              <p className="text-embroidery-secondary text-2xl leading-relaxed">
-                Giulia is a passionate embroidery artist who finds solace and
-                inspiration in the art of stitching. Canvas and thread become
-                her medium for rich narratives, as she draws inspiration from
-                the subtle beauty of nature and human experiences.
-              </p>
-              <p className="text-embroidery-secondary text-2xl leading-relaxed">
-                By translating fleeting emotions into intricately detailed
-                designs, Giulia transforms traditional stitching into a unique
-                visual diary where every piece tells a distinct, vibrant story.
-              </p>
-            </div>
+            {/* About Text - Wraps Around Image */}
+            <p className="text-embroidery-secondary text-2xl leading-relaxed">
+              Giulia
+            </p>
+            <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
           </div>
 
-          <div className="bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
-            <div className="relative">
-              {/* Profile Image - Floated Left */}
-              <div className="float-left mr-6 mb-4">
-                <div className="relative w-44 h-44 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-lg overflow-hidden shadow-md">
-                  <Image
-                    src="/images/Juliana-Embroidery1.jpg"
-                    alt="Juliana - Embroidery Artist"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
-                  />
-                </div>
-              </div>
+          <div className="flex gap-6 bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
+            {/* Profile Image - Floated Left */}
+            <Image
+              src="/images/Juliana-Embroidery1.jpg"
+              alt="Juliana - Embroidery Artist"
+              width={176}
+              height={176}
+              className="object-cover"
+              sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
+            />
 
-              {/* About Text - Wraps Around Image */}
-              <p className="text-embroidery-secondary text-2xl leading-relaxed">
-                Juliana is an embroidery artist whose work is characterized by
-                its delicate craftsmanship and expressive storytelling. Canvas
-                and thread become her medium for rich narratives, as she draws
-                inspiration from the subtle beauty of her surroundings and
-                personal experiences.
-              </p>
-              <p className="text-embroidery-secondary text-2xl leading-relaxed">
-                By translating fleeting memories into intricately detailed
-                designs, Juliana transforms traditional stitching into a unique
-                visual diary where every piece tells a distinct, heartfelt
-                story.
-              </p>
-            </div>
+            {/* About Text - Wraps Around Image */}
+            <p className="text-embroidery-secondary text-2xl leading-relaxed">
+              Juliana
+            </p>
+            <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
           </div>
 
           <div className="bg-embroidery-background rounded-lg shadow-md p-6">
