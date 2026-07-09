@@ -15,6 +15,7 @@ export default function About() {
           </h2>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16">
+          {/* Rachel */}
           <div className="bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
             <div className="relative">
               {/* Profile Image - Floated Left */}
@@ -28,6 +29,9 @@ export default function About() {
                     sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
                   />
                 </div>
+                <p className="text-embroidery-primary text-xl font-bold mt-2">
+                  Rachel
+                </p>
               </div>
 
               {/* About Text - Wraps Around Image */}
@@ -46,40 +50,69 @@ export default function About() {
               </p>
             </div>
           </div>
+
+          {/* Giulia */}
           <div className="flex gap-6 bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
             {/* Profile Image - Floated Left */}
-            <Image
-              src="/images/Giulia-Embroidery1.jpg"
-              alt="Giulia - Embroidery Artist"
-              width={176}
-              height={176}
-              className="object-cover"
-              sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
-            />
+            <div className="relative">
+              <div className="float-left mr-6 mb-4">
+                <div className="relative w-44 h-44 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-lg overflow-hidden shadow-md">
+                  <Image
+                    src="/images/Giulia-Embroidery2.png"
+                    alt="Giulia - Embroidery Artist"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
+                  />
+                </div>
+                <p className="text-embroidery-primary text-xl font-bold mt-2">
+                  Giulia
+                </p>
+              </div>
 
-            {/* About Text - Wraps Around Image */}
-            <p className="text-embroidery-secondary text-2xl leading-relaxed">
-              Giulia
-            </p>
-            <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
+              {/* About Text - Wraps Around Image */}
+              <p className="text-embroidery-secondary text-2xl leading-relaxed">
+                Embroidery is my way of slowing down and finding calm in the
+                middle of busy days. Every stitch reminds me to be patient,
+                embrace imperfections, and enjoy the process as much as the
+                finished piece.
+              </p>
+              <p className="text-embroidery-secondary text-2xl leading-relaxed">
+                I hope each piece carries a little warmth, comfort, and joy into
+                your home. When I’m not embroidering, you’ll usually find me
+                spending time with my husband and our dog, enjoying nature, or
+                being with family and friends. I live in Vancouver, where I work
+                in supportive housing, helping people rebuild stability and
+                hope. I’m also working toward my dream of becoming a physician.
+                Creating with my hands is one of the ways I recharge, and I’m
+                grateful to share that part of myself with you.
+              </p>
+            </div>
           </div>
 
+          {/* Juliana */}
           <div className="flex gap-6 bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
             {/* Profile Image - Floated Left */}
-            <Image
-              src="/images/Juliana-Embroidery1.jpg"
-              alt="Juliana - Embroidery Artist"
-              width={176}
-              height={176}
-              className="object-cover"
-              sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
-            />
+            <div className="relative">
+              <div className="float-left mr-6 mb-4">
+                <div className="relative w-44 h-44 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-lg overflow-hidden shadow-md">
+                  <Image
+                    src="/images/Juliana-Embroidery1.jpg"
+                    alt="Juliana - Embroidery Artist"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
+                  />
+                </div>
+                <p className="text-embroidery-primary text-xl font-bold mt-2">
+                  Juliana
+                </p>
+              </div>
 
-            {/* About Text - Wraps Around Image */}
-            <p className="text-embroidery-secondary text-2xl leading-relaxed">
-              Juliana
-            </p>
-            <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
+              {/* About Text - Wraps Around Image */}
+              <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
+              <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
+            </div>
           </div>
 
           <div className="bg-embroidery-background rounded-lg shadow-md p-6">

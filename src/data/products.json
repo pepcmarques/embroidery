@@ -10,7 +10,7 @@
   },
   {
     "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin02.png",
+    "image": "/images/products/embroidery/goblin07.jpg",
     "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Goblin",
-    "image": "/images/products/embroidery/goblin03.jpg",
+    "image": "/images/products/embroidery/goblin08.jpg",
     "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
@@ -29,6 +29,42 @@
   {
     "name": "Goblin: Oedipus",
     "image": "/images/products/embroidery/goblin04.png",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin05.jpg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin06.jpg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin02.png",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin03.jpg",
     "description": "Embroidery art",
     "price": 99.99,
     "category": "embroidery",
