@@ -26,7 +26,7 @@
     },
     {
       "type": "workshop",
-      "name": "ANH Kitsilano",
+      "name": "Arbutus Neighborhood House",
       "image": "/images/workshops/anh/IMG_001.jpg",
       "message": "",
       "data": "anh/anh.json"
