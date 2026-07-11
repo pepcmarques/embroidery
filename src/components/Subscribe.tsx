@@ -54,7 +54,7 @@ export default function SubscribeComponent() {
         </p>
       )}
       {error && (
-        <p className="text-red-500 font-medium mb-4 text-center">{error}</p>
+        <p id="confirmation-message" className="text-red-500 font-medium mb-4 text-center">{error}</p>
       )}
       <form
         onSubmit={handleSubmit}
