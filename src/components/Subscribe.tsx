@@ -35,7 +35,10 @@ export default function SubscribeComponent() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center" style={{ minHeight: 'calc(100vh - 150px)' }}>
+    <div
+      className="max-w-3xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center"
+      style={{ minHeight: 'calc(100vh - 150px)' }}
+    >
       <h1 className="text-4xl font-bold text-embroidery-primary mb-4">
         Subscribe
       </h1>
@@ -54,7 +57,9 @@ export default function SubscribeComponent() {
         </p>
       )}
       {error && (
-        <p id="confirmation-message" className="text-red-500 font-medium mb-4 text-center">{error}</p>
+        <p className="text-red-500 font-medium mb-4 text-center confirmation-message">
+          {error}
+        </p>
       )}
       <form
         onSubmit={handleSubmit}
