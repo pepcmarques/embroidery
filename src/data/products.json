@@ -45,6 +45,33 @@
     "isActive": true
   },
   {
+    "name": "Spontaneous Theatre",
+    "image": "/images/products/embroidery/spontaneous.jpg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin09.jpg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
+    "name": "Goblin: Oedipus",
+    "image": "/images/products/embroidery/goblin10.jpg",
+    "description": "Embroidery art",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
     "name": "Goblin: Oedipus",
     "image": "/images/products/embroidery/goblin06.jpg",
     "description": "Embroidery art",
