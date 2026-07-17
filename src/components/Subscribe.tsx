@@ -61,14 +61,14 @@ export default function SubscribeComponent() {
       )}
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center items-center gap-4"
+        className="flex w-full flex-col justify-center items-center gap-4"
       >
         <input
           type="email"
           name="email"
           required
           placeholder="Enter your email"
-          className="min-w-md px-4 py-2 border-2 border-embroidery-primary rounded-md focus:outline-none focus:ring-2 focus:ring-embroidery-primary focus:border-embroidery-primary"
+          className="w-full sm:max-w-lg px-4 py-2 border-2 border-embroidery-primary rounded-md focus:outline-none focus:ring-2 focus:ring-embroidery-primary focus:border-embroidery-primary"
         />
         <button
           type="submit"
