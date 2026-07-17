@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { WorkshopCard } from './WorkshopCard';
 import { Workshop } from '../components/ui/types';
+import { Pagination } from './Pagination';
 
 interface WorkshopGridProps {
   initialWorkshops?: Workshop[];
@@ -123,50 +124,11 @@ export const WorkshopGrid = ({
             </div>
           )}
 
-          {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center space-x-2 mt-8">
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className={`px-3 py-2 text-sm font-medium rounded-md border ${
-                  currentPage === 1
-                    ? 'text-embroidery-muted border-embroidery-muted bg-transparent cursor-not-allowed'
-                    : 'text-embroidery-neutral border-embroidery-border hover:bg-embroidery-accent cursor-pointer'
-                }`}
-              >
-                Previous
-              </button>
-
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                (page) => (
-                  <button
-                    key={page}
-                    onClick={() => handlePageChange(page)}
-                    className={`px-3 py-2 text-sm font-medium rounded-md border ${
-                      page === currentPage
-                        ? 'bg-embroidery-primary text-white border-embroidery-primary cursor-default'
-                        : 'text-embroidery-neutral border-embroidery-border hover:bg-embroidery-accent cursor-pointer'
-                    }`}
-                  >
-                    {page}
-                  </button>
-                )
-              )}
-
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className={`px-3 py-2 text-sm font-medium rounded-md border ${
-                  currentPage === totalPages
-                    ? 'text-embroidery-muted border-embroidery-muted bg-transparent cursor-not-allowed'
-                    : 'text-embroidery-neutral border-embroidery-border hover:bg-embroidery-accent cursor-pointer'
-                }`}
-              >
-                Next
-              </button>
-            </div>
-          )}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
         </>
       )}
     </div>

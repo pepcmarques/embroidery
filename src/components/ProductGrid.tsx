@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { ProductCard } from './ProductCard';
 import { Product } from '../components/ui/product.types';
-import { Button } from '../components/ui/Button';
+import { Pagination } from './Pagination';
 import productsData from '../data/products.json';
 
 interface ProductGridProps {
@@ -31,7 +31,9 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     filteredProducts = filteredProducts.filter((product) => product.isActive);
 
     // Sort products by category
-    filteredProducts = filteredProducts.sort((a, b) => a.category.localeCompare(b.category));
+    filteredProducts = filteredProducts.sort((a, b) =>
+      a.category.localeCompare(b.category)
+    );
 
     setProducts(filteredProducts);
     setIsLoading(false);
@@ -46,55 +48,6 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
     // No need to fetch products again for client-side pagination
-  };
-
-  const renderPagination = () => {
-    if (!products) return null;
-
-    const totalPages = Math.ceil(products.length / productsPerPage);
-    const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
-
-    return (
-      <div className="flex items-center justify-center space-x-2 mt-8">
-        <Button
-          onClick={() => handlePageChange(currentPage - 1)}
-          disabled={currentPage === 1}
-          variant="outline"
-          size="sm"
-          className={`disabled:text-embroidery-muted disabled:border-embroidery-muted disabled:bg-transparent disabled:cursor-not-allowed ${
-            currentPage > 1 ? 'cursor-pointer' : ''
-          }`}
-        >
-          Previous
-        </Button>
-
-        {pages.map((page) => (
-          <Button
-            key={page}
-            onClick={() => handlePageChange(page)}
-            variant={page === currentPage ? 'primary' : 'outline'}
-            size="sm"
-            className={
-              page === currentPage ? 'cursor-default' : 'cursor-pointer'
-            }
-          >
-            {page}
-          </Button>
-        ))}
-
-        <Button
-          onClick={() => handlePageChange(currentPage + 1)}
-          disabled={currentPage === totalPages}
-          variant="outline"
-          size="sm"
-          className={`disabled:text-embroidery-muted disabled:border-embroidery-muted disabled:bg-transparent disabled:cursor-not-allowed ${
-            currentPage < totalPages ? 'cursor-pointer' : ''
-          }`}
-        >
-          Next
-        </Button>
-      </div>
-    );
   };
 
   // Get the current page's products
@@ -151,7 +104,13 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
             </div>
           )}
 
-          {renderPagination()}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={
+              products ? Math.ceil(products.length / productsPerPage) : 0
+            }
+            onPageChange={handlePageChange}
+          />
         </>
       )}
     </div>
