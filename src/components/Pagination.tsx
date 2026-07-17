@@ -40,7 +40,7 @@ export const Pagination = ({
             disabled={currentPage === 1}
             variant="outline"
             size="sm"
-            className="w-full min-w-22 sm:w-auto"
+            className="w-full min-w-16 sm:w-auto"
             aria-label="First page"
           >
             First
@@ -50,12 +50,12 @@ export const Pagination = ({
             disabled={currentPage === 1}
             variant="outline"
             size="sm"
-            className="w-full min-w-22 sm:w-auto"
+            className="w-full min-w-16 sm:w-auto"
             aria-label="Previous page"
           >
             Prev
           </Button>
-          <div className="w-full min-w-22 sm:w-auto">
+          <div className="flex flex-col justify-center items-center min-w-20 w-full sm:w-auto">
             <span className="text-sm font-medium text-embroidery-secondary">
               Page {currentPage} of {totalPages}
             </span>
@@ -65,7 +65,7 @@ export const Pagination = ({
             disabled={currentPage === totalPages}
             variant="outline"
             size="sm"
-            className="w-full min-w-22 sm:w-auto"
+            className="w-full min-w-16 sm:w-auto"
             aria-label="Next page"
           >
             Next
@@ -75,7 +75,7 @@ export const Pagination = ({
             disabled={currentPage === totalPages}
             variant="outline"
             size="sm"
-            className="w-full min-w-22 sm:w-auto"
+            className="w-full min-w-16 sm:w-auto"
             aria-label="Last page"
           >
             Last
@@ -90,7 +90,7 @@ export const Pagination = ({
             disabled={currentPage === 1}
             variant="outline"
             size="sm"
-            className="min-w-22"
+            className="min-w-16"
             aria-label="First page"
           >
             First
@@ -100,7 +100,7 @@ export const Pagination = ({
             disabled={currentPage === 1}
             variant="outline"
             size="sm"
-            className="min-w-22"
+            className="min-w-16"
             aria-label="Previous page"
           >
             Previous
@@ -127,7 +127,7 @@ export const Pagination = ({
             disabled={currentPage === totalPages}
             variant="outline"
             size="sm"
-            className="min-w-22"
+            className="min-w-16"
             aria-label="Next page"
           >
             Next
@@ -137,7 +137,7 @@ export const Pagination = ({
             disabled={currentPage === totalPages}
             variant="outline"
             size="sm"
-            className="min-w-22"
+            className="min-w-16"
             aria-label="Last page"
           >
             Last

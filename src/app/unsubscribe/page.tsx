@@ -35,7 +35,10 @@ export default function UnsubscribePage() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center">
+    <div
+      className="w-full mx-auto py-16 px-4 sm:px-6 lg:px-8 text-center bg-embroidery-surface"
+      style={{ minHeight: 'calc(100vh - 150px)' }}
+    >
       <h1 className="text-4xl font-bold text-embroidery-primary mb-4">
         Unsubscribe
       </h1>
@@ -48,9 +51,13 @@ export default function UnsubscribePage() {
         </span>
       </div>
       {status && (
-        <p className="text-embroidery-primary font-medium mb-4">{status}</p>
+        <p className="text-embroidery-primary font-medium mb-4 text-center">
+          {status}
+        </p>
       )}
-      {error && <p className="text-red-500 font-medium mb-4">{error}</p>}
+      {error && (
+        <p className="text-red-500 font-medium mb-4 text-center">{error}</p>
+      )}
       <form
         onSubmit={handleSubmit}
         className="flex flex-col justify-center items-center gap-4"
@@ -60,13 +67,13 @@ export default function UnsubscribePage() {
           name="email"
           required
           placeholder="Enter your email"
-          className="min-w-2xl sm:w-auto px-4 py-2 border border-embroidery-border rounded-md focus:outline-none focus:ring-2 focus:ring-embroidery-primary focus:border-transparent"
+          className="min-w-lg sm:w-auto px-4 py-2 border-2 border-embroidery-primary rounded-md focus:outline-none focus:ring-2 focus:ring-embroidery-primary focus:border-embroidery-primary"
         />
         <button
           type="submit"
           className="px-6 py-2 bg-embroidery-primary text-white rounded-md hover:bg-embroidery-primary-dark transition-colors"
         >
-          Subscribe
+          Unsubscribe
         </button>
       </form>
     </div>
