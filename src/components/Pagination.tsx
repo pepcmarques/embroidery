@@ -30,12 +30,11 @@ export const Pagination = ({
   );
 
   return (
-    <div className={`mt-8 flex flex-col items-center gap-3 ${className}`}>
-      <div className="flex w-full flex-col items-center gap-2 sm:hidden">
-        <span className="text-sm font-medium text-embroidery-secondary">
-          Page {currentPage} of {totalPages}
-        </span>
-        <div className="flex flex-wrap items-center justify-center gap-2">
+    <div
+      className={`mt-8 flex w-full justify-around items-center gap-3 ${className}`}
+    >
+      <div className="flex items-center gap-2 sm:hidden">
+        <div className="flex  items-center justify-center gap-2">
           <Button
             onClick={() => goToPage(1)}
             disabled={currentPage === 1}
@@ -56,6 +55,11 @@ export const Pagination = ({
           >
             Prev
           </Button>
+          <div className="w-full min-w-22 sm:w-auto">
+            <span className="text-sm font-medium text-embroidery-secondary">
+              Page {currentPage} of {totalPages}
+            </span>
+          </div>
           <Button
             onClick={() => goToPage(currentPage + 1)}
             disabled={currentPage === totalPages}
