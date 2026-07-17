@@ -68,7 +68,7 @@ export default function SubscribeComponent() {
           name="email"
           required
           placeholder="Enter your email"
-          className="min-w-lg sm:w-auto px-4 py-2 border-2 border-embroidery-primary rounded-md focus:outline-none focus:ring-2 focus:ring-embroidery-primary focus:border-embroidery-primary"
+          className="min-w-md px-4 py-2 border-2 border-embroidery-primary rounded-md focus:outline-none focus:ring-2 focus:ring-embroidery-primary focus:border-embroidery-primary"
         />
         <button
           type="submit"
