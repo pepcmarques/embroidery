@@ -4,11 +4,41 @@
       "type": "registration",
       "name": "Next Workshop",
       "message": [
-        "Next <b>Embroidering Words Workshop</b> will be at <b>Vancouver Public Library - Kitsilano Branch</b> on <b>May 2nd, 2026</b> from <b>9:30am</b> to <b>12:00pm</b>.",
-        "Register for our next workshop by clicking the link below."
+        "Next <b>Embroidering Words Workshop</b> will be at <b>Vancouver Public Library - Kitsilano Branch</b> on <b>September 26th, 2026</b> from <b>10:00am</b> to <b>12:00pm</b>.",
+        "Register for our next workshop by clicking the button below."
       ],
-      "url": "https://forms.gle/fshGboLYoumwnJFR8",
-      "hide": true
+      "url": "https://forms.gle/yPYRjg3YV7csaYfU9",
+      "hide": false
+    },
+    {
+      "type": "registration",
+      "name": "Next Workshop",
+      "message": [
+        "Next <b>Embroidering Words Workshop</b> will be at <b>Vancouver Public Library - South Hill Branch</b> on <b>October 17th, 2026</b> from <b>10:00am</b> to <b>12:00pm</b>.",
+        "Register for our next workshop by clicking the button below."
+      ],
+      "url": "https://forms.gle/dQurbR5fqcUbATo48",
+      "hide": false
+    },
+    {
+      "type": "registration",
+      "name": "Next Workshop",
+      "message": [
+        "Next <b>Embroidering Words Workshop</b> will be at <b>Vancouver Public Library - Kitsilano Branch</b> on <b>November 28th, 2026</b> from <b>10:00am</b> to <b>12:00pm</b>.",
+        "Register for our next workshop by clicking the button below."
+      ],
+      "url": "https://forms.gle/1owMWhwnnRSAkCJJ8",
+      "hide": false
+    },
+    {
+      "type": "registration",
+      "name": "Next Workshop",
+      "message": [
+        "Next <b>Embroidering Words Workshop</b> will be at <b>Vancouver Public Library - South Hill Branch</b> on <b>January 9th, 2027</b> from <b>10:00am</b> to <b>12:00pm</b>.",
+        "Register for our next workshop by clicking the button below."
+      ],
+      "url": "https://forms.gle/vgH94UpQHeQVPBgHA",
+      "hide": false
     },
     {
       "type": "workshop",

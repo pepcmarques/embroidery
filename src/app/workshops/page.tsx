@@ -91,7 +91,7 @@ export default function WorkshopsPage() {
                 <Link
                   href={
                     workshop.type === 'registration'
-                      ? '/workshops/registration'
+                      ? `/workshops/registration/${index}`
                       : `/workshops/photos/${getWorkshopPhotoId(workshop)}`
                   }
                   className={`inline-block bg-embroidery-primary text-white px-3 py-1.5 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors ${
@@ -124,6 +124,14 @@ export default function WorkshopsPage() {
               <Image
                 src="/images/nsglogo.svg"
                 alt="Neighbourhood Small Grants"
+                width={150}
+                height={100}
+              />
+            </Link>
+            <Link href="https://spotlightonmentalhealth.com/cif/" target="_blank">
+              <Image
+                src="/images/ciflogo.png"
+                alt="Consumer Initiative Fund"
                 width={150}
                 height={100}
               />

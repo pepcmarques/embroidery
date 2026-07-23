@@ -10,7 +10,6 @@ interface ProductCardProps {
 }
 
 export const ProductCard = ({ product }: ProductCardProps) => {
-  const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isImageModalOpen, setIsImageModalOpen] = useState(false);
 
   const formatPrice = (price: number | string) => {
@@ -58,13 +57,10 @@ export const ProductCard = ({ product }: ProductCardProps) => {
             <h3 className="text-lg font-semibold text-embroidery-neutral line-clamp-2">
               {product.name}
             </h3>
+            <p className="text-sm text-embroidery-muted mb-3 line-clamp-2">
+              {product.artist}
+            </p>
           </div>
-
-          {/* 
-          <p className="text-sm text-embroidery-muted mb-3 line-clamp-2">
-            {product.description}
-          </p>
-          */}
         </CardContent>
       </Card>
 
