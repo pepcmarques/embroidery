@@ -128,9 +128,12 @@ export default function WorkshopsPage() {
                 height={100}
               />
             </Link>
-            <Link href="https://spotlightonmentalhealth.com/cif/" target="_blank">
+            <Link
+              href="https://spotlightonmentalhealth.com/cif/"
+              target="_blank"
+            >
               <Image
-                src="/images/ciflogo.png"
+                src="/images/CIFLogo.png"
                 alt="Consumer Initiative Fund"
                 width={150}
                 height={100}
