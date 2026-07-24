@@ -1,28 +1,29 @@
+// src/components/ProductCollection.tsx
 'use client';
 
-import { useState } from 'react';
 import { Product } from '../components/ui/product.types';
+import Image from 'next/image';
 import { Card, CardContent } from '../components/ui/Card';
-import { ImageModal } from './ImageModal';
 
-interface ProductCardProps {
-  product: Product;
+interface ProductCollectionProps {
+  product: Product; // expects a product that has `group` and `groupItems`
+  onClick: () => void;
 }
 
-export const ProductCard = ({ product }: ProductCardProps) => {
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-
+export const ProductCollection = ({
+  product,
+  onClick,
+}: ProductCollectionProps) => {
   return (
-    <>
-      <Card className="group hover:shadow-lg transition-shadow duration-200 border border-embroidery-border hover:border-embroidery-primary">
-        <div
-          className="aspect-square overflow-hidden rounded-t-lg bg-embroidery-accent cursor-pointer"
-          onClick={() => product.image && setIsImageModalOpen(true)}
-        >
+    <Card className="group hover:shadow-lg transition-shadow duration-200 border border-embroidery-border hover:border-embroidery-primary">
+      <div onClick={onClick}>
+        <div className="aspect-square overflow-hidden rounded-t-lg bg-embroidery-accent cursor-pointer">
           {product.image ? (
-            <img
+            <Image
               src={product.image}
               alt={product.name}
+              width={400}
+              height={400}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-200"
             />
           ) : (
@@ -47,21 +48,27 @@ export const ProductCard = ({ product }: ProductCardProps) => {
         <CardContent className="p-4">
           <div className="mb-2">
             <h3 className="text-lg font-semibold text-embroidery-neutral line-clamp-2">
-              {product.name}
+              {product.group ?? product.name} Collection
             </h3>
-            <p className="text-sm text-embroidery-muted mb-3 line-clamp-2">
-              {product.artist}
-            </p>
+            <div className="flex items-center space-x-1 text-sm text-embroidery-muted">
+              <span>Open</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </div>
           </div>
         </CardContent>
-      </Card>
-
-      <ImageModal
-        isOpen={isImageModalOpen}
-        onClose={() => setIsImageModalOpen(false)}
-        imageSrc={product.image}
-        altText={product.name}
-      />
-    </>
+      </div>
+    </Card>
   );
 };
