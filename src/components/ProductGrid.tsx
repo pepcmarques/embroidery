@@ -35,7 +35,7 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     const nonGrouped: Product[] = [];
 
     filteredProducts.forEach((p) => {
-      if (p.group) {
+      if (p.group && p.isActive) {
         if (!groupedMap.has(p.group)) groupedMap.set(p.group, []);
         groupedMap.get(p.group)!.push(p);
       } else {
