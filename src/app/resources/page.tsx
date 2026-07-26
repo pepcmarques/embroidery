@@ -14,6 +14,10 @@ export default function Resources() {
       name: 'Embroidering Words Instructions (PDF)',
       url: '/EmbroideringWordsInstructions.pdf',
     },
+    {
+      name: 'Ustitch - Cross Stitch Pattern Generator (Free)',
+      url: 'https://ustitch.vercel.app',
+    },
   ];
 
   return (
