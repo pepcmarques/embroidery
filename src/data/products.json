@@ -1,5 +1,14 @@
 [
   {
+    "name": "Snake",
+    "image": "/images/products/embroidery/snake.jpg",
+    "artist": "Rachel Torres",
+    "price": 99.99,
+    "category": "embroidery",
+    "stock": 1,
+    "isActive": true
+  },
+  {
     "name": "Goblin: Oedipus",
     "image": "/images/products/embroidery/goblin01.jpg",
     "artist": "Rachel Torres",
