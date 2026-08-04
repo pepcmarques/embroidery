@@ -4,7 +4,11 @@ import { useState, useEffect } from 'react';
 import { ProductCard } from './ProductCard';
 import { ProductCollection } from './ProductCollection';
 import { GroupCarouselModal } from './GroupCarouselModal';
-import { Product } from '../components/ui/product.types';
+import {
+  Product,
+  ProductBlock,
+  ProductData,
+} from '../components/ui/product.types';
 import { Pagination } from './Pagination';
 import productsData from '../data/products.json';
 
@@ -13,6 +17,16 @@ interface ProductGridProps {
 }
 
 const productsPerPage = 6;
+
+const buildProduct = (
+  product: ProductData,
+  id: string,
+  group?: string
+): Product => ({
+  id,
+  ...product,
+  ...(group ? { group } : {}),
+});
 
 export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
   const [selectedGroup, setSelectedGroup] = useState<Product[] | null>(null);
@@ -28,50 +42,44 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
     // Simulate API delay
     await new Promise((resolve) => setTimeout(resolve, 300));
 
-    let filteredProducts = productsData as Product[];
+    const blocks = productsData as ProductBlock[];
+    const orderedProducts: Product[] = [];
 
-    // Group items that have a `group` key
-    const groupedMap = new Map<string, Product[]>();
-    const nonGrouped: Product[] = [];
+    blocks.forEach((block, blockIndex) => {
+      if (block.type === 'item') {
+        if (block.item.isActive) {
+          orderedProducts.push(buildProduct(block.item, `item-${blockIndex}`));
+        }
+        return;
+      }
 
-    filteredProducts.forEach((p) => {
-      if (p.group && p.isActive) {
-        if (!groupedMap.has(p.group)) groupedMap.set(p.group, []);
-        groupedMap.get(p.group)!.push(p);
-      } else {
-        nonGrouped.push(p);
+      const items = block.items
+        .filter((item) => item.isActive)
+        .map((item, itemIndex) =>
+          buildProduct(
+            item,
+            `group-${blockIndex}-item-${itemIndex}`,
+            block.name
+          )
+        );
+
+      if (items.length > 0) {
+        orderedProducts.push({
+          id: `group-${blockIndex}`,
+          name: block.name,
+          image: items[0].image,
+          artist: items[0].artist,
+          price: 0,
+          category: items[0].category,
+          stock: items.reduce((sum, item) => sum + item.stock, 0),
+          isActive: true,
+          group: block.name,
+          groupItems: items,
+        });
       }
     });
 
-    // Create placeholder group products
-    const groupedProducts: Product[] = [];
-    groupedMap.forEach((items, groupName) => {
-      groupedProducts.push({
-        id: `group-${groupName}`,
-        name: groupName,
-        image: items[0]?.image ?? '',
-        artist: items[0]?.artist ?? '',
-        price: 0,
-        category: items[0]?.category ?? '',
-        stock: items.reduce((sum, it) => sum + it.stock, 0),
-        isActive: true,
-        group: groupName,
-        groupItems: items,
-      } as Product);
-    });
-
-    // Merge back non-grouped items
-    filteredProducts = [...groupedProducts, ...nonGrouped];
-
-    // Only show active products
-    filteredProducts = filteredProducts.filter((product) => product.isActive);
-
-    // Sort products by category
-    filteredProducts = filteredProducts.sort((a, b) =>
-      a.category.localeCompare(b.category)
-    );
-
-    setProducts(filteredProducts);
+    setProducts(orderedProducts);
     setIsLoading(false);
   };
 
@@ -110,13 +118,17 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
         <>
           {products.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {getCurrentPageProducts().map((product, index) => (
+              {getCurrentPageProducts().map((product, index) =>
                 product.group ? (
-                                <ProductCollection key={index} product={product} onClick={() => setSelectedGroup(product.groupItems ?? null)} />
-                              ) : (
-                                <ProductCard key={index} product={product} />
-                              )
-              ))}
+                  <ProductCollection
+                    key={index}
+                    product={product}
+                    onClick={() => setSelectedGroup(product.groupItems ?? null)}
+                  />
+                ) : (
+                  <ProductCard key={index} product={product} />
+                )
+              )}
             </div>
           ) : (
             <div className="text-center py-12">
@@ -156,7 +168,10 @@ export const ProductGrid = ({ initialProducts }: ProductGridProps) => {
 
       {/* Group carousel modal */}
       {selectedGroup && (
-        <GroupCarouselModal items={selectedGroup} onClose={() => setSelectedGroup(null)} />
+        <GroupCarouselModal
+          items={selectedGroup}
+          onClose={() => setSelectedGroup(null)}
+        />
       )}
     </div>
   );

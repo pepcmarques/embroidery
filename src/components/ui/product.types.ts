@@ -1,9 +1,4 @@
-export interface Product {
-  // Optional grouping for event-based collections
-  group?: string;
-  // When `group` is present, `groupItems` holds the full list of products in that group
-  groupItems?: Product[];
-  id: string;
+export interface ProductData {
   name: string;
   image: string;
   artist: string;
@@ -12,3 +7,22 @@ export interface Product {
   stock: number;
   isActive: boolean;
 }
+
+export interface Product extends ProductData {
+  id: string;
+  group?: string;
+  groupItems?: Product[];
+}
+
+export interface ProductItemBlock {
+  type: 'item';
+  item: ProductData;
+}
+
+export interface ProductGroupBlock {
+  type: 'group';
+  name: string;
+  items: ProductData[];
+}
+
+export type ProductBlock = ProductItemBlock | ProductGroupBlock;
