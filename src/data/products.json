@@ -1,406 +1,512 @@
 [
   {
-    "name": "Snake",
-    "image": "/images/products/embroidery/snake.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Snake",
+      "image": "/images/products/embroidery/snake.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin01.jpg",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin07.jpg",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
+    "type": "group",
     "name": "Goblin",
-    "image": "/images/products/embroidery/goblin08.jpg",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "items": [
+      {
+        "name": "Goblin: Oedipus",
+        "image": "/images/products/embroidery/goblin01.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Goblin: Oedipus",
+        "image": "/images/products/embroidery/goblin07.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Goblin",
+        "image": "/images/products/embroidery/goblin08.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Goblin: Oedipus",
+        "image": "/images/products/embroidery/goblin04.png",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Spontaneous Theatre",
+        "image": "/images/products/embroidery/spontaneous.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Goblin: Oedipus",
+        "image": "/images/products/embroidery/goblin09.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Goblin: Oedipus",
+        "image": "/images/products/embroidery/goblin10.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Goblin: Oedipus",
+        "image": "/images/products/embroidery/goblin02.png",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      }
+    ]
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin04.png",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Goblin: Oedipus",
+      "image": "/images/products/embroidery/goblin05.jpg",
+      "artist": "Juliana",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin05.jpg",
-    "artist": "Juliana",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Goblin: Oedipus",
+      "image": "/images/products/embroidery/goblin06.jpg",
+      "artist": "Giulia",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Spontaneous Theatre",
-    "image": "/images/products/embroidery/spontaneous.jpg",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Goblin: Oedipus",
+      "image": "/images/products/embroidery/goblin03.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin09.jpg",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Mirror - Romeo and Juliet",
+      "image": "/images/products/embroidery/mirrorRJ1.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin10.jpg",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Mirror - Romeo and Juliet Story",
+      "image": "/images/products/embroidery/mirrorRJ.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin06.jpg",
-    "artist": "Giulia",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Mirror - embroidery and watercolor",
+      "image": "/images/products/embroidery/Mirror_01.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin02.png",
-    "artist": "Rachel Torres",
-    "group": "Goblin",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Sunita Dhir - MLA",
+      "image": "/images/products/embroidery/SunitaDhir.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Goblin: Oedipus",
-    "image": "/images/products/embroidery/goblin03.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Romeo and Juliet",
+      "image": "/images/products/embroidery/romeoJuliet.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Mirror - Romeo and Juliet",
-    "image": "/images/products/embroidery/mirrorRJ1.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Macbeth",
+      "image": "/images/products/embroidery/macabeth.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Mirror - Romeo and Juliet Story",
-    "image": "/images/products/embroidery/mirrorRJ.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Romeo and Juliet",
+      "image": "/images/products/embroidery/romeoJulietDance.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Mirror - embroidery and watercolor",
-    "image": "/images/products/embroidery/Mirror_01.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "King Lear",
+      "image": "/images/products/embroidery/kingLear.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Sunita Dhir - MLA",
-    "image": "/images/products/embroidery/SunitaDhir.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "VPL Marpole Mural",
+      "image": "/images/products/embroidery/marpoleVpl.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Romeo and Juliet",
-    "image": "/images/products/embroidery/romeoJuliet.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "VPL Carnegie",
+      "image": "/images/products/embroidery/carnegieVpl.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "VPL Terry Salman",
+      "image": "/images/products/embroidery/tsnVpl.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Romeo and Juliet",
-    "image": "/images/products/embroidery/romeoJulietDance.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Bookmarks",
+      "image": "/images/products/embroidery/bookmarks.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "King Lear",
-    "image": "/images/products/embroidery/kingLear.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Trust the process",
+      "image": "/images/products/xstich/IMG_0812.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "VPL Marpole Mural",
-    "image": "/images/products/embroidery/marpoleVpl.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Stay close...",
+      "image": "/images/products/xstich/IMG_0813.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "VPL Carnegie",
-    "image": "/images/products/embroidery/carnegieVpl.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Stop overthinking",
+      "image": "/images/products/xstich/IMG_0816.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "VPL Terry Salman",
-    "image": "/images/products/embroidery/tsnVpl.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Self care isn't selfish",
+      "image": "/images/products/xstich/IMG_0817.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Bookmarks",
-    "image": "/images/products/embroidery/bookmarks.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "It's OK to have a bad day",
+      "image": "/images/products/xstich/IMG_0818.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Trust the process",
-    "image": "/images/products/xstich/IMG_0812.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Do less with more focus",
+      "image": "/images/products/xstich/IMG_0819.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Stay close...",
-    "image": "/images/products/xstich/IMG_0813.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Today is a new day",
+      "image": "/images/products/xstich/IMG_0820.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Stop overthinking",
-    "image": "/images/products/xstich/IMG_0816.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Time for positivi-tea",
+      "image": "/images/products/xstich/IMG_0821.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Self care isn't selfish",
-    "image": "/images/products/xstich/IMG_0817.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "I am free to be me",
+      "image": "/images/products/xstich/IMG_0822.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "It's OK to have a bad day",
-    "image": "/images/products/xstich/IMG_0818.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Slow down",
+      "image": "/images/products/xstich/IMG_0842.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "x-stich",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Do less with more focus",
-    "image": "/images/products/xstich/IMG_0819.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Marpole Neighborhood House",
+      "image": "/images/products/embroidery/mnh.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Today is a new day",
-    "image": "/images/products/xstich/IMG_0820.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Macbeth",
+      "image": "/images/products/embroidery/macabeth2.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Time for positivi-tea",
-    "image": "/images/products/xstich/IMG_0821.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Macbeth",
+      "image": "/images/products/embroidery/macabeth3.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "I am free to be me",
-    "image": "/images/products/xstich/IMG_0822.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Marry Wives of Windsor",
+      "image": "/images/products/embroidery/Windsor.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Slow down",
-    "image": "/images/products/xstich/IMG_0842.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "x-stich",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Happy Birthday Earrings",
+      "image": "/images/products/embroidery/earrings_1.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Marpole Neighborhood House",
-    "image": "/images/products/embroidery/mnh.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Rainbow Earrings",
+      "image": "/images/products/embroidery/earrings_2.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth2.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Mapple Earrings",
+      "image": "/images/products/embroidery/earrings_3.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Macbeth",
-    "image": "/images/products/embroidery/macabeth3.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Quote - Shakespeare",
+      "image": "/images/products/embroidery/quote01.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Marry Wives of Windsor",
-    "image": "/images/products/embroidery/Windsor.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Quote - Shakespeare",
+      "image": "/images/products/embroidery/quote02.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   },
   {
-    "name": "Happy Birthday Earrings",
-    "image": "/images/products/embroidery/earrings_1.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "name": "Rainbow Earrings",
-    "image": "/images/products/embroidery/earrings_2.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "name": "Mapple Earrings",
-    "image": "/images/products/embroidery/earrings_3.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote01.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote02.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
-  },
-  {
-    "name": "Quote - Shakespeare",
-    "image": "/images/products/embroidery/quote03.jpg",
-    "artist": "Rachel Torres",
-    "price": 99.99,
-    "category": "embroidery",
-    "stock": 1,
-    "isActive": true
+    "type": "item",
+    "item": {
+      "name": "Quote - Shakespeare",
+      "image": "/images/products/embroidery/quote03.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
   }
 ]
