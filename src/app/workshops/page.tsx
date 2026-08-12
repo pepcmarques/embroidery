@@ -90,6 +90,9 @@ export default function WorkshopsPage() {
                 </div>
                 <Link
                   href={
+                    workshop.newTab === true
+                      ? workshop.url || '#'
+                      : 
                     workshop.type === 'registration'
                       ? `/workshops/registration/${index}`
                       : `/workshops/photos/${getWorkshopPhotoId(workshop)}`
@@ -97,6 +100,7 @@ export default function WorkshopsPage() {
                   className={`inline-block bg-embroidery-primary text-white px-3 py-1.5 rounded-md font-medium hover:bg-embroidery-primary/90 transition-colors ${
                     workshop.image ? '' : 'absolute bottom-5 left-5'
                   }`}
+                  target={workshop.newTab ? '_blank' : '_self'}
                 >
                   {workshop.type === 'registration'
                     ? 'Register'

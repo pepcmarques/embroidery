@@ -2,42 +2,58 @@
   "workshops": [
     {
       "type": "registration",
-      "name": "Join Our Free September Workshop",
+      "name": "Join our Mindful Embroidery Course",
+      "message": [
+        "October 15, 2026 to November 5, 2026",
+        "Every Thursday, 6:00 PM - 7:30 PM",
+        "Kerrisdale Community Centre, 5851 West Blvd, Vancouver, BC V6M3W9"
+      ],
+      "newTab": true,
+      "url": "https://anc.ca.apm.activecommunities.com/vancouver/activity/search?activity_select_param=2&center_ids=33&activity_category_ids=30&drop_in=0&activity_keyword=embroidery&viewMode=list",
+      "hide": false
+    },
+    {
+      "type": "registration",
+      "name": "Join our Free September Workshop",
       "message": [
         "September 26th, 2026",
         "10am-12pm",
-        "VPL - Fraserview Branch - 1950 Argyle Ave, Vancouver, BC V5P 2A8"
+        "VPL - Fraserview Branch - 1950 Argyle Ave, Vancouver, BC V5P2A8"
       ],
+      "newTab": false,
       "url": "https://forms.gle/yPYRjg3YV7csaYfU9",
       "hide": false
     },
     {
       "type": "registration",
-      "name": "Join Our Free October Workshop",
+      "name": "Join our Free October Workshop",
       "message": [
         "October 17th, 2026",
         "10am-12pm, local TBD"
       ],
+      "newTab": false,
       "url": "https://forms.gle/dQurbR5fqcUbATo48",
       "hide": false
     },
     {
       "type": "registration",
-      "name": "Join Our Free November Workshop",
+      "name": "Join our Free November Workshop",
       "message": [
         "November 28th, 2026",
         "10am-12pm, local TBD"
       ],
+      "newTab": false,
       "url": "https://forms.gle/1owMWhwnnRSAkCJJ8",
       "hide": false
     },
     {
       "type": "registration",
-      "name": "Join Our Free January Workshop",
+      "name": "Join our Free January Workshop",
       "message": [
         "January 9th, 2027",
         "10am-12pm, local TBD"
       ],
+      "newTab": false,
       "url": "https://forms.gle/vgH94UpQHeQVPBgHA",
       "hide": false
     },
