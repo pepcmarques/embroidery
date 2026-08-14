@@ -10,7 +10,7 @@ type HeaderMenuProps = {
 
 const menuItems = [
   { href: '/about', label: 'About' },
-  { href: '/', label: 'Pieces' },
+  { href: '/', label: 'Art Work' },
   { href: '/workshops', label: 'Workshops' },
   { href: '/exhibitions', label: 'Exhibitions' },
   { href: '/resources', label: 'Resources' },
