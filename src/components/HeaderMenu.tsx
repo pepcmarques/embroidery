@@ -11,6 +11,7 @@ type HeaderMenuProps = {
 const menuItems = [
   { href: '/about', label: 'About' },
   { href: '/', label: 'Art Work' },
+  { href: '/classes', label: 'Classes' },
   { href: '/workshops', label: 'Workshops' },
   { href: '/exhibitions', label: 'Exhibitions' },
   { href: '/resources', label: 'Resources' },
@@ -29,7 +30,7 @@ export const HeaderMenu = ({
             key={item.href}
             href={item.href}
             onClick={onLinkClick}
-            className={`px-3 py-2 text-lg font-medium transition-colors ${
+            className={`px-2 py-2 text-lg font-medium transition-colors ${
               pathname === item.href
                 ? 'text-embroidery-primary border-b-2 border-embroidery-primary'
                 : 'text-embroidery-secondary hover:text-embroidery-primary'

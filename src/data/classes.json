@@ -1,0 +1,17 @@
+{
+  "classes": [
+    {
+      "type": "registration",
+      "name": "Join our Mindful Embroidery Course",
+      "message": [
+        "October 15, 2026 to November 5, 2026 (4 sessions)",
+        "Every Thursday, 6:00 PM - 7:30 PM",
+        "Material included",
+        "Kerrisdale Community Centre, 5851 West Blvd, Vancouver, BC V6M3W9"
+      ],
+      "newTab": true,
+      "url": "https://anc.ca.apm.activecommunities.com/vancouver/activity/search?activity_select_param=2&center_ids=33&activity_category_ids=30&drop_in=0&activity_keyword=embroidery&viewMode=list",
+      "hide": false
+    }
+  ]
+}
