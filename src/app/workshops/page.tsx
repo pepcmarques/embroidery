@@ -161,6 +161,14 @@ export default function WorkshopsPage() {
                 height={100}
               />
             </Link>
+            <Link href="https://www.kitshouse.org" target="_blank">
+              <Image
+                src="/images/kitslogo.png"
+                alt="Kitsilano Neighbourhood House"
+                width={170}
+                height={150}
+              />
+            </Link>
             <Link href="https://www.bardonthebeach.org" target="_blank">
               <Image
                 src="/images/bardlogo.png"
