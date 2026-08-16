@@ -2,6 +2,18 @@
   {
     "type": "item",
     "item": {
+      "name": "Macbeth",
+      "image": "/images/products/embroidery/macabeth4.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
+  },
+  {
+    "type": "item",
+    "item": {
       "name": "Snake",
       "image": "/images/products/embroidery/snake.jpg",
       "artist": "Rachel Torres",
