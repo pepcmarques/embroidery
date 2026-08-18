@@ -51,7 +51,7 @@ export default function WorkshopsPage() {
               <div
                 key={index}
                 className={`bg-embroidery-background rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${
-                  workshop.image ? 'h-auto' : 'min-h-64 relative'
+                  workshop.image ? 'h-auto' : 'min-h-70 relative'
                 }`}
               >
                 {workshop.image && (
