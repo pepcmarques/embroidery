@@ -106,6 +106,17 @@ export default function WorkshopsPage() {
                     ? 'Register'
                     : 'View Workshop'}
                 </Link>
+                {index === 0 && workshop.type === 'registration' && (
+                  <div className="mt-4 flex justify-center">
+                    <Image
+                      src="/images/posters/poster.png"
+                      alt="Workshop"
+                      width={80}
+                      height={40}
+                      className="rounded-md object-contain"
+                    />
+                  </div>
+                )}
               </div>
             ))}
         </div>
