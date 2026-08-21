@@ -38,15 +38,16 @@ export default function About() {
               <p className="text-embroidery-secondary text-2xl leading-relaxed">
                 My art is my way of connecting with my anxiety. It gives me
                 space to be fully present and to understand that imperfections
-                are what make it beautiful. Thank you for taking the time to
-                appreciate it.
+                are what make it beautiful. I learned embroidery from my mom
+                when I was nine years old. Since then, it has been my way of
+                slowing down and finding calm in the middle of busy days. I also
+                love being around people, and when I&apos;m not creating my own
+                pieces, I facilitate multigenerational embroidery workshops.
+                
               </p>
               <p className="text-embroidery-secondary text-2xl leading-relaxed">
-                I welcome you to carry with you the feelings I've gently woven
-                into my art. Besides embroidering, I enjoy spending time with my
-                family and friends, as well as connecting with colleagues and
-                patrons at my work. I live in Vancouver with my husband and my
-                son. I work at Vancouver Public Library.
+                <b>Embroidering Words</b> is a co-operative where we come together to
+                create and sell our pieces.
               </p>
             </div>
           </div>
