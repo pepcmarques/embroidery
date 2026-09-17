@@ -43,11 +43,10 @@ export default function About() {
                 slowing down and finding calm in the middle of busy days. I also
                 love being around people, and when I&apos;m not creating my own
                 pieces, I facilitate multigenerational embroidery workshops.
-                
               </p>
               <p className="text-embroidery-secondary text-2xl leading-relaxed">
-                <b>Embroidering Words</b> is a co-operative where we come together to
-                create and sell our pieces.
+                <b>Embroidering Words</b> is a co-operative where we come
+                together to create and sell our pieces.
               </p>
             </div>
           </div>
@@ -88,31 +87,6 @@ export default function About() {
                 Creating with my hands is one of the ways I recharge, and I’m
                 grateful to share that part of myself with you.
               </p>
-            </div>
-          </div>
-
-          {/* Juliana */}
-          <div className="flex gap-6 bg-embroidery-background rounded-lg shadow-md p-6 mb-8">
-            {/* Profile Image - Floated Left */}
-            <div className="relative">
-              <div className="float-left mr-6 mb-4">
-                <div className="relative w-44 h-44 md:w-40 md:h-40 lg:w-44 lg:h-44 rounded-lg overflow-hidden shadow-md">
-                  <Image
-                    src="/images/Juliana-Embroidery1.jpg"
-                    alt="Juliana - Embroidery Artist"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 192px, (max-width: 1024px) 160px, 192px"
-                  />
-                </div>
-                <p className="text-embroidery-primary text-xl font-bold mt-2">
-                  Juliana
-                </p>
-              </div>
-
-              {/* About Text - Wraps Around Image */}
-              <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
-              <p className="text-embroidery-secondary text-2xl leading-relaxed"></p>
             </div>
           </div>
 
