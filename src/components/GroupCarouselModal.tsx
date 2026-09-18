@@ -20,7 +20,10 @@ export const GroupCarouselModal = ({
   return (
     <>
       {/* Background overlay */}
-      <div className="absolute inset-0 bg-black opacity-75" onClick={onClose} />
+      <div
+        className="fixed inset-0 z-40 bg-black opacity-75"
+        onClick={onClose}
+      />
 
       <div
         role="dialog"
@@ -39,7 +42,7 @@ export const GroupCarouselModal = ({
             {items.map((item, index) => (
               <div
                 key={index}
-                className="shrink-0 w-64 p-4 border rounded"
+                className="shrink-0 w-64 p-4 border rounded mb-4"
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelectedItem(item);
