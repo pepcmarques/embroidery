@@ -109,10 +109,21 @@ export default function WorkshopsPage() {
                 {index === 0 && workshop.type === 'registration' && (
                   <div className="mt-4 flex justify-center">
                     <Image
-                      src="/images/posters/poster.png"
+                      src="/images/posters/poster1.png"
                       alt="Workshop"
                       width={80}
                       height={40}
+                      className="rounded-md object-contain"
+                    />
+                  </div>
+                )}
+                {index === 1 && workshop.type === 'registration' && (
+                  <div className="mt-4 flex justify-center">
+                    <Image
+                      src="/images/posters/poster2.png"
+                      alt="Workshop"
+                      width={150}
+                      height={150}
                       className="rounded-md object-contain"
                     />
                   </div>
