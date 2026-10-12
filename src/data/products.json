@@ -322,6 +322,24 @@
     "name": "Personalized Gifts",
     "items": [
       {
+        "name": "The World Remembers",
+        "image": "/images/products/embroidery/TheWorldRemembers.png",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Wedding Couple",
+        "image": "/images/products/embroidery/Couple.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
         "name": "Marpole Neighborhood House",
         "image": "/images/products/embroidery/mnh.jpg",
         "artist": "Rachel Torres",
