@@ -4,7 +4,7 @@
     "name": "Brazil - Orixas and Saints",
     "items": [
       {
-        "name": "Orixa: Iemanjá",
+        "name": "Orixa: Oxum",
         "image": "/images/products/embroidery/religion01.jpg",
         "artist": "Rachel Torres",
         "price": 99.99,
@@ -13,7 +13,7 @@
         "isActive": true
       },
       {
-        "name": "Orixa: Oxum",
+        "name": "Orixa: Iansã",
         "image": "/images/products/embroidery/religion02.jpg",
         "artist": "Rachel Torres",
         "price": 99.99,
@@ -22,7 +22,7 @@
         "isActive": true
       },
       {
-        "name": "Orixa: Xangô",
+        "name": "Orixa: Oxóssi",
         "image": "/images/products/embroidery/religion03.jpg",
         "artist": "Rachel Torres",
         "price": 99.99,
@@ -31,7 +31,7 @@
         "isActive": true
       },
       {
-        "name": "Orixa: Oxóssi",
+        "name": "Orixa: Ogum",
         "image": "/images/products/embroidery/religion04.jpg",
         "artist": "Rachel Torres",
         "price": 99.99,
@@ -40,7 +40,7 @@
         "isActive": true
       },
       {
-        "name": "Orixa: Ogum",
+        "name": "Orixa: Iemanjá",
         "image": "/images/products/embroidery/religion05.jpg",
         "artist": "Rachel Torres",
         "price": 99.99,
