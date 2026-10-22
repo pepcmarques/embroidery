@@ -1,5 +1,29 @@
 [
   {
+    "type": "item",
+    "item": {
+      "name": "PMS",
+      "image": "/images/products/embroidery/tpm.jpg",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
+  },
+  {
+    "type": "item",
+    "item": {
+      "name": "Scorpions",
+      "image": "/images/products/embroidery/scorpio.png",
+      "artist": "Rachel Torres",
+      "price": 99.99,
+      "category": "embroidery",
+      "stock": 1,
+      "isActive": true
+    }
+  },
+  {
     "type": "group",
     "name": "Brazil - Orixas and Saints",
     "items": [
@@ -40,8 +64,17 @@
         "isActive": true
       },
       {
-        "name": "Orixa: Iemanjá",
+        "name": "Orixa: Yemanjá",
         "image": "/images/products/embroidery/religion05.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
+      {
+        "name": "Orixa: Xangô",
+        "image": "/images/products/embroidery/religion06.jpg",
         "artist": "Rachel Torres",
         "price": 99.99,
         "category": "embroidery",
@@ -321,6 +354,15 @@
     "type": "group",
     "name": "Personalized Gifts",
     "items": [
+      {
+        "name": "Fox",
+        "image": "/images/products/embroidery/fox.jpg",
+        "artist": "Rachel Torres",
+        "price": 99.99,
+        "category": "embroidery",
+        "stock": 1,
+        "isActive": true
+      },
       {
         "name": "The World Remembers",
         "image": "/images/products/embroidery/TheWorldRemembers.png",

@@ -16,6 +16,10 @@ const workshopDetails: Record<string, { title: string; dataPath: string }> = {
     title: 'Arbutus Neighbourhood House',
     dataPath: 'anh/anh.json',
   },
+  260926: {
+    title: 'VPL Fraserview Branch',
+    dataPath: '260926/260926.json',
+  },
 };
 
 export default function PhotosPage() {
